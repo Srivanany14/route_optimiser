@@ -42,3 +42,7 @@ next-env.d.ts
 venv/
 __pycache__/
 *.pyc
+=6.31.1,
+=9.14.6206
+**pycache**/
+venv/
