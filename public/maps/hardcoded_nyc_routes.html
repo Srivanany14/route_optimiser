@@ -1,0 +1,2732 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f6e2f99beb4df76c8337633d2a070a9e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_f6e2f99beb4df76c8337633d2a070a9e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f6e2f99beb4df76c8337633d2a070a9e = L.map(
+                "map_f6e2f99beb4df76c8337633d2a070a9e",
+                {
+                    center: [40.7505, -73.9934],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_169be9e69ab51142480822e9a0b1a800 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_169be9e69ab51142480822e9a0b1a800.addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var marker_f6e6893ad2756bf00cd8f3d091cd2d96 = L.marker(
+                [40.7505, -73.9934],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_8b288d6a8cd4fed82fbcee751bdae836 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [20, 20],
+}
+            );
+        
+    
+        var popup_55fa7a1a59ac3466e41355f13212ca19 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_684dfaf3566d2a7811c19b34f38d21cf = $(`<div id="html_684dfaf3566d2a7811c19b34f38d21cf" style="width: 100.0%; height: 100.0%;">         <div style='font-size: 14px; font-weight: bold;'>         🏢 <b>MAIN DEPOT</b><br>         📍 Midtown Manhattan Depot<br>         🚛 4 Vehicles<br>         🎯 Hardcoded Routes         </div>         </div>`)[0];
+                popup_55fa7a1a59ac3466e41355f13212ca19.setContent(html_684dfaf3566d2a7811c19b34f38d21cf);
+            
+        
+
+        marker_f6e6893ad2756bf00cd8f3d091cd2d96.bindPopup(popup_55fa7a1a59ac3466e41355f13212ca19)
+        ;
+
+        
+    
+    
+            marker_f6e6893ad2756bf00cd8f3d091cd2d96.bindTooltip(
+                `<div>
+                     Distribution Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f6e6893ad2756bf00cd8f3d091cd2d96.setIcon(icon_8b288d6a8cd4fed82fbcee751bdae836);
+            
+    
+            var marker_a041e4d64dbe2f85a5d91d5fbcf30f98 = L.marker(
+                [40.7508, -73.9876],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_5522cd32de7b206d19003053f9986a6c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_db6497db53b684bc854595b5bec50a54 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9ed3f544b74ba00582ea2602fab67304 = $(`<div id="html_9ed3f544b74ba00582ea2602fab67304" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 1</b><br>             <b>Name:</b> Macy's Herald Square<br>             <b>Zone:</b> North<br>             <b>Demand:</b> 3             </div>             </div>`)[0];
+                popup_db6497db53b684bc854595b5bec50a54.setContent(html_9ed3f544b74ba00582ea2602fab67304);
+            
+        
+
+        marker_a041e4d64dbe2f85a5d91d5fbcf30f98.bindPopup(popup_db6497db53b684bc854595b5bec50a54)
+        ;
+
+        
+    
+    
+            marker_a041e4d64dbe2f85a5d91d5fbcf30f98.bindTooltip(
+                `<div>
+                     #1: Macy's Herald Square
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a041e4d64dbe2f85a5d91d5fbcf30f98.setIcon(icon_5522cd32de7b206d19003053f9986a6c);
+            
+    
+            var marker_e2c71d5f78b2a5e7d3cdf602526b827d = L.marker(
+                [40.7508, -73.9876],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_65f9b67603a40e4ce9dd75efb6998ef7 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e1\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_e2c71d5f78b2a5e7d3cdf602526b827d.setIcon(div_icon_65f9b67603a40e4ce9dd75efb6998ef7);
+            
+    
+            var marker_52173ae9c9f5770174ada78efeb302a4 = L.marker(
+                [40.7548, -73.9876],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_b2da884ab61979d689365f974276cdb6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_82160713cb4d814eb1f0e56bde3a2c75 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_05581e16321bf7c1b95880db024d1612 = $(`<div id="html_05581e16321bf7c1b95880db024d1612" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 2</b><br>             <b>Name:</b> 42nd & 7th Ave<br>             <b>Zone:</b> North<br>             <b>Demand:</b> 2             </div>             </div>`)[0];
+                popup_82160713cb4d814eb1f0e56bde3a2c75.setContent(html_05581e16321bf7c1b95880db024d1612);
+            
+        
+
+        marker_52173ae9c9f5770174ada78efeb302a4.bindPopup(popup_82160713cb4d814eb1f0e56bde3a2c75)
+        ;
+
+        
+    
+    
+            marker_52173ae9c9f5770174ada78efeb302a4.bindTooltip(
+                `<div>
+                     #2: 42nd & 7th Ave
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_52173ae9c9f5770174ada78efeb302a4.setIcon(icon_b2da884ab61979d689365f974276cdb6);
+            
+    
+            var marker_8c0ce3c7c5da00abfcd3bb2ddb26e1d3 = L.marker(
+                [40.7548, -73.9876],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_4a84d9d6d4212665685d757c13f34b51 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e2\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_8c0ce3c7c5da00abfcd3bb2ddb26e1d3.setIcon(div_icon_4a84d9d6d4212665685d757c13f34b51);
+            
+    
+            var marker_c4c96a9704f4e931bf79407d7bf193c0 = L.marker(
+                [40.755, -73.9851],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_582ed7da60b1258179cf35ef9df6e8fe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9a353fdf3240b0a5342f34b4ebf7d2bf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cccdd5c6bbed29efee66271e824edde9 = $(`<div id="html_cccdd5c6bbed29efee66271e824edde9" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 3</b><br>             <b>Name:</b> Times Square Plaza<br>             <b>Zone:</b> North<br>             <b>Demand:</b> 4             </div>             </div>`)[0];
+                popup_9a353fdf3240b0a5342f34b4ebf7d2bf.setContent(html_cccdd5c6bbed29efee66271e824edde9);
+            
+        
+
+        marker_c4c96a9704f4e931bf79407d7bf193c0.bindPopup(popup_9a353fdf3240b0a5342f34b4ebf7d2bf)
+        ;
+
+        
+    
+    
+            marker_c4c96a9704f4e931bf79407d7bf193c0.bindTooltip(
+                `<div>
+                     #3: Times Square Plaza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c4c96a9704f4e931bf79407d7bf193c0.setIcon(icon_582ed7da60b1258179cf35ef9df6e8fe);
+            
+    
+            var marker_9c4f1c83c078b3f77421e44ce6d0d825 = L.marker(
+                [40.755, -73.9851],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_4c8e1687871957a5f7587082ccd3cca4 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e3\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_9c4f1c83c078b3f77421e44ce6d0d825.setIcon(div_icon_4c8e1687871957a5f7587082ccd3cca4);
+            
+    
+            var marker_4f62c512f90a3361f05c32c87eac6300 = L.marker(
+                [40.7536, -73.9832],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_05e2b638e934476e7ee6925480abf322 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_935fb1c53b01f50a3cafab5f870170cb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b97d07ad6ca1204c021cad4cc169eadf = $(`<div id="html_b97d07ad6ca1204c021cad4cc169eadf" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 4</b><br>             <b>Name:</b> Bryant Park Cafe<br>             <b>Zone:</b> North<br>             <b>Demand:</b> 2             </div>             </div>`)[0];
+                popup_935fb1c53b01f50a3cafab5f870170cb.setContent(html_b97d07ad6ca1204c021cad4cc169eadf);
+            
+        
+
+        marker_4f62c512f90a3361f05c32c87eac6300.bindPopup(popup_935fb1c53b01f50a3cafab5f870170cb)
+        ;
+
+        
+    
+    
+            marker_4f62c512f90a3361f05c32c87eac6300.bindTooltip(
+                `<div>
+                     #4: Bryant Park Cafe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4f62c512f90a3361f05c32c87eac6300.setIcon(icon_05e2b638e934476e7ee6925480abf322);
+            
+    
+            var marker_d9ed27d0d3040680ad4911598932b790 = L.marker(
+                [40.7536, -73.9832],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_e692d0c400a657a742ab59137940c754 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e4\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_d9ed27d0d3040680ad4911598932b790.setIcon(div_icon_e692d0c400a657a742ab59137940c754);
+            
+    
+            var marker_55929ea2dd5f725e1e8ddcaeeb1aebb7 = L.marker(
+                [40.7533, -73.9877],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_f8a45a1076082350506e4dfd8ed5b228 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6a74786742e7d31bc4f32376a00872f9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d8cc3be0ccc692732a18524b30758088 = $(`<div id="html_d8cc3be0ccc692732a18524b30758088" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 5</b><br>             <b>Name:</b> 40th & Broadway<br>             <b>Zone:</b> North<br>             <b>Demand:</b> 3             </div>             </div>`)[0];
+                popup_6a74786742e7d31bc4f32376a00872f9.setContent(html_d8cc3be0ccc692732a18524b30758088);
+            
+        
+
+        marker_55929ea2dd5f725e1e8ddcaeeb1aebb7.bindPopup(popup_6a74786742e7d31bc4f32376a00872f9)
+        ;
+
+        
+    
+    
+            marker_55929ea2dd5f725e1e8ddcaeeb1aebb7.bindTooltip(
+                `<div>
+                     #5: 40th & Broadway
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_55929ea2dd5f725e1e8ddcaeeb1aebb7.setIcon(icon_f8a45a1076082350506e4dfd8ed5b228);
+            
+    
+            var marker_e2e936d6f39c3746eadbc61a4fa62b0b = L.marker(
+                [40.7533, -73.9877],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_3c0b7d48cad871b2d164c4f87b7fd489 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e5\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_e2e936d6f39c3746eadbc61a4fa62b0b.setIcon(div_icon_3c0b7d48cad871b2d164c4f87b7fd489);
+            
+    
+            var marker_63065b2237e20042ee6779ad4c1453af = L.marker(
+                [40.7485, -73.9844],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_dc94e44a62199ec4242a0ebda11b63de = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_372ed1464c47d5109f4f38e6f88da099 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_acc0f696020d62012347a6e28f9d8b9c = $(`<div id="html_acc0f696020d62012347a6e28f9d8b9c" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 6</b><br>             <b>Name:</b> 34th & Park Ave<br>             <b>Zone:</b> East<br>             <b>Demand:</b> 2             </div>             </div>`)[0];
+                popup_372ed1464c47d5109f4f38e6f88da099.setContent(html_acc0f696020d62012347a6e28f9d8b9c);
+            
+        
+
+        marker_63065b2237e20042ee6779ad4c1453af.bindPopup(popup_372ed1464c47d5109f4f38e6f88da099)
+        ;
+
+        
+    
+    
+            marker_63065b2237e20042ee6779ad4c1453af.bindTooltip(
+                `<div>
+                     #6: 34th & Park Ave
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_63065b2237e20042ee6779ad4c1453af.setIcon(icon_dc94e44a62199ec4242a0ebda11b63de);
+            
+    
+            var marker_7c879587058482e784f476248e8ce2f5 = L.marker(
+                [40.7485, -73.9844],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_da03b8d817759e72e075477947766f47 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e6\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_7c879587058482e784f476248e8ce2f5.setIcon(div_icon_da03b8d817759e72e075477947766f47);
+            
+    
+            var marker_ac8d7b070692abd943c4e4d9fd404149 = L.marker(
+                [40.7514, -73.981],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_8aa7b9f572eaedd19c67485bfaa33b83 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0fc48b4f4c4ff789ec39348d04662be1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_72ff94ce98151788bb173482538bc64c = $(`<div id="html_72ff94ce98151788bb173482538bc64c" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 7</b><br>             <b>Name:</b> 38th & Lexington<br>             <b>Zone:</b> East<br>             <b>Demand:</b> 3             </div>             </div>`)[0];
+                popup_0fc48b4f4c4ff789ec39348d04662be1.setContent(html_72ff94ce98151788bb173482538bc64c);
+            
+        
+
+        marker_ac8d7b070692abd943c4e4d9fd404149.bindPopup(popup_0fc48b4f4c4ff789ec39348d04662be1)
+        ;
+
+        
+    
+    
+            marker_ac8d7b070692abd943c4e4d9fd404149.bindTooltip(
+                `<div>
+                     #7: 38th & Lexington
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ac8d7b070692abd943c4e4d9fd404149.setIcon(icon_8aa7b9f572eaedd19c67485bfaa33b83);
+            
+    
+            var marker_30b507199c4ba507759f22572d1c7ff5 = L.marker(
+                [40.7514, -73.981],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_5d02e115f7a75bc54b20b63349b3e8fa = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e7\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_30b507199c4ba507759f22572d1c7ff5.setIcon(div_icon_5d02e115f7a75bc54b20b63349b3e8fa);
+            
+    
+            var marker_c31717d9c4e0a8ee119659530e465b3f = L.marker(
+                [40.7478, -73.9789],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_c257fe187191f3cba14aa42a57a173e1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d9b4d10e674b05d2ae467650a8ec73a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c3fe6fe93027558c8b287f1351fbbba6 = $(`<div id="html_c3fe6fe93027558c8b287f1351fbbba6" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 8</b><br>             <b>Name:</b> Murray Hill<br>             <b>Zone:</b> East<br>             <b>Demand:</b> 2             </div>             </div>`)[0];
+                popup_d9b4d10e674b05d2ae467650a8ec73a2.setContent(html_c3fe6fe93027558c8b287f1351fbbba6);
+            
+        
+
+        marker_c31717d9c4e0a8ee119659530e465b3f.bindPopup(popup_d9b4d10e674b05d2ae467650a8ec73a2)
+        ;
+
+        
+    
+    
+            marker_c31717d9c4e0a8ee119659530e465b3f.bindTooltip(
+                `<div>
+                     #8: Murray Hill
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c31717d9c4e0a8ee119659530e465b3f.setIcon(icon_c257fe187191f3cba14aa42a57a173e1);
+            
+    
+            var marker_86ed6e730569c9d2d0a3e9377dba8ebb = L.marker(
+                [40.7478, -73.9789],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_278b009844f475099dae5829119ec036 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e8\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_86ed6e730569c9d2d0a3e9377dba8ebb.setIcon(div_icon_278b009844f475099dae5829119ec036);
+            
+    
+            var marker_a01768b3a0618c73023cc8b0db920a4a = L.marker(
+                [40.7521, -73.9844],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_0a42c455e248da7d6e14cb3067b44085 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_26f25fedd88c963c8180f2e86ede0339 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_60966522c0ece7ed55156e6a167018a1 = $(`<div id="html_60966522c0ece7ed55156e6a167018a1" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 9</b><br>             <b>Name:</b> 42nd & Park Ave<br>             <b>Zone:</b> East<br>             <b>Demand:</b> 4             </div>             </div>`)[0];
+                popup_26f25fedd88c963c8180f2e86ede0339.setContent(html_60966522c0ece7ed55156e6a167018a1);
+            
+        
+
+        marker_a01768b3a0618c73023cc8b0db920a4a.bindPopup(popup_26f25fedd88c963c8180f2e86ede0339)
+        ;
+
+        
+    
+    
+            marker_a01768b3a0618c73023cc8b0db920a4a.bindTooltip(
+                `<div>
+                     #9: 42nd & Park Ave
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a01768b3a0618c73023cc8b0db920a4a.setIcon(icon_0a42c455e248da7d6e14cb3067b44085);
+            
+    
+            var marker_0afb106086304171aeb41a1d20b8c3c1 = L.marker(
+                [40.7521, -73.9844],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_6006f44b88ccdab36bb5ff41ad166464 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e9\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_0afb106086304171aeb41a1d20b8c3c1.setIcon(div_icon_6006f44b88ccdab36bb5ff41ad166464);
+            
+    
+            var marker_8f42a15a1a2351aed0d4b46cf500fdc5 = L.marker(
+                [40.7505, -73.9772],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_0f7c2f02a04d2d5f0d4cd3adc6f88fb7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_733567912207a9095d1e296dc10dcbde = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1f48e93dd79a781c6d4ca2f5861b74e6 = $(`<div id="html_1f48e93dd79a781c6d4ca2f5861b74e6" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 10</b><br>             <b>Name:</b> Grand Central South<br>             <b>Zone:</b> East<br>             <b>Demand:</b> 3             </div>             </div>`)[0];
+                popup_733567912207a9095d1e296dc10dcbde.setContent(html_1f48e93dd79a781c6d4ca2f5861b74e6);
+            
+        
+
+        marker_8f42a15a1a2351aed0d4b46cf500fdc5.bindPopup(popup_733567912207a9095d1e296dc10dcbde)
+        ;
+
+        
+    
+    
+            marker_8f42a15a1a2351aed0d4b46cf500fdc5.bindTooltip(
+                `<div>
+                     #10: Grand Central South
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8f42a15a1a2351aed0d4b46cf500fdc5.setIcon(icon_0f7c2f02a04d2d5f0d4cd3adc6f88fb7);
+            
+    
+            var marker_4f78d56744aaaa93d9d591d02861362a = L.marker(
+                [40.7505, -73.9772],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_1633e6745089df7683d543e5e7e776b8 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e10\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_4f78d56744aaaa93d9d591d02861362a.setIcon(div_icon_1633e6745089df7683d543e5e7e776b8);
+            
+    
+            var marker_f50cd247c8f4e6d35ccc4a732f0c1229 = L.marker(
+                [40.747, -73.9857],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_43fda7494f18d7b89c0baf782ed79c3a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_22b6bd06706312f5d6e8eedbf6e73d74 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_909f00aa844aeabd72d5ae12c33492f1 = $(`<div id="html_909f00aa844aeabd72d5ae12c33492f1" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 11</b><br>             <b>Name:</b> Empire State South<br>             <b>Zone:</b> South<br>             <b>Demand:</b> 3             </div>             </div>`)[0];
+                popup_22b6bd06706312f5d6e8eedbf6e73d74.setContent(html_909f00aa844aeabd72d5ae12c33492f1);
+            
+        
+
+        marker_f50cd247c8f4e6d35ccc4a732f0c1229.bindPopup(popup_22b6bd06706312f5d6e8eedbf6e73d74)
+        ;
+
+        
+    
+    
+            marker_f50cd247c8f4e6d35ccc4a732f0c1229.bindTooltip(
+                `<div>
+                     #11: Empire State South
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f50cd247c8f4e6d35ccc4a732f0c1229.setIcon(icon_43fda7494f18d7b89c0baf782ed79c3a);
+            
+    
+            var marker_637503e09aaee0e37c2e0de932c02224 = L.marker(
+                [40.747, -73.9857],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_b6976bdf36b5e12df3f49bd1b9befad6 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e11\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_637503e09aaee0e37c2e0de932c02224.setIcon(div_icon_b6976bdf36b5e12df3f49bd1b9befad6);
+            
+    
+            var marker_cbf165fdb311553c256bc14b9919b65e = L.marker(
+                [40.7478, -73.9857],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_98f36af7caea5d8d6fc886320019357c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_490e0e10db29bd36f3033f1b526c3b05 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_90255a98dcbaa993d1517e2148ba5c7b = $(`<div id="html_90255a98dcbaa993d1517e2148ba5c7b" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 12</b><br>             <b>Name:</b> Koreatown 32nd<br>             <b>Zone:</b> South<br>             <b>Demand:</b> 2             </div>             </div>`)[0];
+                popup_490e0e10db29bd36f3033f1b526c3b05.setContent(html_90255a98dcbaa993d1517e2148ba5c7b);
+            
+        
+
+        marker_cbf165fdb311553c256bc14b9919b65e.bindPopup(popup_490e0e10db29bd36f3033f1b526c3b05)
+        ;
+
+        
+    
+    
+            marker_cbf165fdb311553c256bc14b9919b65e.bindTooltip(
+                `<div>
+                     #12: Koreatown 32nd
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cbf165fdb311553c256bc14b9919b65e.setIcon(icon_98f36af7caea5d8d6fc886320019357c);
+            
+    
+            var marker_0328b3ebfb6d7ea921bee8b90c563292 = L.marker(
+                [40.7478, -73.9857],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_c5974854100ecdeb052cd01edc32b2a2 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e12\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_0328b3ebfb6d7ea921bee8b90c563292.setIcon(div_icon_c5974854100ecdeb052cd01edc32b2a2);
+            
+    
+            var marker_38b5194e21959ce562a62a521bbc71db = L.marker(
+                [40.7461, -73.9881],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_6fdc495a7cd0bfd7eb64964dd26d8a4a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b82f901e1b7552f2a2409a4bfb69269f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_133fbc6be8cafd0c3b4d2220c2ca89f3 = $(`<div id="html_133fbc6be8cafd0c3b4d2220c2ca89f3" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 13</b><br>             <b>Name:</b> 30th & Broadway<br>             <b>Zone:</b> South<br>             <b>Demand:</b> 3             </div>             </div>`)[0];
+                popup_b82f901e1b7552f2a2409a4bfb69269f.setContent(html_133fbc6be8cafd0c3b4d2220c2ca89f3);
+            
+        
+
+        marker_38b5194e21959ce562a62a521bbc71db.bindPopup(popup_b82f901e1b7552f2a2409a4bfb69269f)
+        ;
+
+        
+    
+    
+            marker_38b5194e21959ce562a62a521bbc71db.bindTooltip(
+                `<div>
+                     #13: 30th & Broadway
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_38b5194e21959ce562a62a521bbc71db.setIcon(icon_6fdc495a7cd0bfd7eb64964dd26d8a4a);
+            
+    
+            var marker_e11481f9bebb67a08f0df4c98fc982b4 = L.marker(
+                [40.7461, -73.9881],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_24aebf39d1b965f3b232bc5f8c3afd8f = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e13\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_e11481f9bebb67a08f0df4c98fc982b4.setIcon(div_icon_24aebf39d1b965f3b232bc5f8c3afd8f);
+            
+    
+            var marker_5fb324bb0ccc65c74eac932c3abb5dd6 = L.marker(
+                [40.7443, -73.9882],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_165695ab80470ca1cd95ffafeeacc12e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d81b40b74b2b4d2e9ce136ff4beac7cb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b89015b4fa8d8b926d5ef7a19ae93135 = $(`<div id="html_b89015b4fa8d8b926d5ef7a19ae93135" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 14</b><br>             <b>Name:</b> 28th & 6th Ave<br>             <b>Zone:</b> South<br>             <b>Demand:</b> 2             </div>             </div>`)[0];
+                popup_d81b40b74b2b4d2e9ce136ff4beac7cb.setContent(html_b89015b4fa8d8b926d5ef7a19ae93135);
+            
+        
+
+        marker_5fb324bb0ccc65c74eac932c3abb5dd6.bindPopup(popup_d81b40b74b2b4d2e9ce136ff4beac7cb)
+        ;
+
+        
+    
+    
+            marker_5fb324bb0ccc65c74eac932c3abb5dd6.bindTooltip(
+                `<div>
+                     #14: 28th & 6th Ave
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5fb324bb0ccc65c74eac932c3abb5dd6.setIcon(icon_165695ab80470ca1cd95ffafeeacc12e);
+            
+    
+            var marker_590fd50a806ef8bb1cdc3a97aa44bcba = L.marker(
+                [40.7443, -73.9882],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_0229838d00a3089f6b2a978b84be86ca = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e14\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_590fd50a806ef8bb1cdc3a97aa44bcba.setIcon(div_icon_0229838d00a3089f6b2a978b84be86ca);
+            
+    
+            var marker_76237e80a9f1a508a140f0379f1c4854 = L.marker(
+                [40.7425, -73.9873],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_34d5d9b47fc92c192d426da98fad1463 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d7f629902c271e9412c85b0605fe6caf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f7d5cb97f65df8639c3b2ea5da86977a = $(`<div id="html_f7d5cb97f65df8639c3b2ea5da86977a" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 15</b><br>             <b>Name:</b> Madison Square Park<br>             <b>Zone:</b> South<br>             <b>Demand:</b> 3             </div>             </div>`)[0];
+                popup_d7f629902c271e9412c85b0605fe6caf.setContent(html_f7d5cb97f65df8639c3b2ea5da86977a);
+            
+        
+
+        marker_76237e80a9f1a508a140f0379f1c4854.bindPopup(popup_d7f629902c271e9412c85b0605fe6caf)
+        ;
+
+        
+    
+    
+            marker_76237e80a9f1a508a140f0379f1c4854.bindTooltip(
+                `<div>
+                     #15: Madison Square Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_76237e80a9f1a508a140f0379f1c4854.setIcon(icon_34d5d9b47fc92c192d426da98fad1463);
+            
+    
+            var marker_16ae16e488e62b0fef533bfd560eb6e0 = L.marker(
+                [40.7425, -73.9873],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_08c63acc367a00741c2fc948245a183a = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e15\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_16ae16e488e62b0fef533bfd560eb6e0.setIcon(div_icon_08c63acc367a00741c2fc948245a183a);
+            
+    
+            var marker_43aaca5e77dbd3415fb0380315946349 = L.marker(
+                [40.7574, -73.9913],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_6e7227ee81b0eb717da6a5062eec22f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b2f216c1da279a0aec108558229a9dce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e86c984c8470a5bb66139768e7d9cdb8 = $(`<div id="html_e86c984c8470a5bb66139768e7d9cdb8" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 16</b><br>             <b>Name:</b> 42nd & 9th Ave<br>             <b>Zone:</b> West<br>             <b>Demand:</b> 2             </div>             </div>`)[0];
+                popup_b2f216c1da279a0aec108558229a9dce.setContent(html_e86c984c8470a5bb66139768e7d9cdb8);
+            
+        
+
+        marker_43aaca5e77dbd3415fb0380315946349.bindPopup(popup_b2f216c1da279a0aec108558229a9dce)
+        ;
+
+        
+    
+    
+            marker_43aaca5e77dbd3415fb0380315946349.bindTooltip(
+                `<div>
+                     #16: 42nd & 9th Ave
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_43aaca5e77dbd3415fb0380315946349.setIcon(icon_6e7227ee81b0eb717da6a5062eec22f4);
+            
+    
+            var marker_68db1dd292501585733b723f59b57694 = L.marker(
+                [40.7574, -73.9913],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_8086026bfd00f302fda62110e403e295 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e16\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_68db1dd292501585733b723f59b57694.setIcon(div_icon_8086026bfd00f302fda62110e403e295);
+            
+    
+            var marker_c6ec0b0072b7fd999faf08b99b1a885d = L.marker(
+                [40.7534, -73.9943],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_8203c4f26d010eeba93d79d23313781a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d4cf060279b7313e54a882ee6b879afa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_82e5c1c42a3d6244699c4043659fe54f = $(`<div id="html_82e5c1c42a3d6244699c4043659fe54f" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 17</b><br>             <b>Name:</b> 38th & 9th Ave<br>             <b>Zone:</b> West<br>             <b>Demand:</b> 3             </div>             </div>`)[0];
+                popup_d4cf060279b7313e54a882ee6b879afa.setContent(html_82e5c1c42a3d6244699c4043659fe54f);
+            
+        
+
+        marker_c6ec0b0072b7fd999faf08b99b1a885d.bindPopup(popup_d4cf060279b7313e54a882ee6b879afa)
+        ;
+
+        
+    
+    
+            marker_c6ec0b0072b7fd999faf08b99b1a885d.bindTooltip(
+                `<div>
+                     #17: 38th & 9th Ave
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c6ec0b0072b7fd999faf08b99b1a885d.setIcon(icon_8203c4f26d010eeba93d79d23313781a);
+            
+    
+            var marker_caa05dff84c39bf0da896193593ffdae = L.marker(
+                [40.7534, -73.9943],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_03d334e44830a6a26a2c4dbec8c4f853 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e17\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_caa05dff84c39bf0da896193593ffdae.setIcon(div_icon_03d334e44830a6a26a2c4dbec8c4f853);
+            
+    
+            var marker_47185c9ed4493432700f8468a6a10df6 = L.marker(
+                [40.7505, -73.997],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_a1a20a2f7dd9e4e12b44bcc375ac70b7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f82accf102851ee3ac0da5e8124f020a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0c1777e885b1cf52647748b2d2bee9b9 = $(`<div id="html_0c1777e885b1cf52647748b2d2bee9b9" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 18</b><br>             <b>Name:</b> 34th & 9th Ave<br>             <b>Zone:</b> West<br>             <b>Demand:</b> 2             </div>             </div>`)[0];
+                popup_f82accf102851ee3ac0da5e8124f020a.setContent(html_0c1777e885b1cf52647748b2d2bee9b9);
+            
+        
+
+        marker_47185c9ed4493432700f8468a6a10df6.bindPopup(popup_f82accf102851ee3ac0da5e8124f020a)
+        ;
+
+        
+    
+    
+            marker_47185c9ed4493432700f8468a6a10df6.bindTooltip(
+                `<div>
+                     #18: 34th & 9th Ave
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_47185c9ed4493432700f8468a6a10df6.setIcon(icon_a1a20a2f7dd9e4e12b44bcc375ac70b7);
+            
+    
+            var marker_37b78ed9a147977ef358190dc239c2a0 = L.marker(
+                [40.7505, -73.997],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_86d6e823762b471954c86ce7dc59bb50 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e18\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_37b78ed9a147977ef358190dc239c2a0.setIcon(div_icon_86d6e823762b471954c86ce7dc59bb50);
+            
+    
+            var marker_8ea34397bdb8ba17a250c91acefd6605 = L.marker(
+                [40.7478, -73.9995],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_f8e6ed82f0d208dc43861c82e5443f40 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5f44842c2216f4b2c697a208e8467270 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_87c4e1a66cc2d9a346a7a89e93917edd = $(`<div id="html_87c4e1a66cc2d9a346a7a89e93917edd" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 19</b><br>             <b>Name:</b> 30th & 10th Ave<br>             <b>Zone:</b> West<br>             <b>Demand:</b> 3             </div>             </div>`)[0];
+                popup_5f44842c2216f4b2c697a208e8467270.setContent(html_87c4e1a66cc2d9a346a7a89e93917edd);
+            
+        
+
+        marker_8ea34397bdb8ba17a250c91acefd6605.bindPopup(popup_5f44842c2216f4b2c697a208e8467270)
+        ;
+
+        
+    
+    
+            marker_8ea34397bdb8ba17a250c91acefd6605.bindTooltip(
+                `<div>
+                     #19: 30th & 10th Ave
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8ea34397bdb8ba17a250c91acefd6605.setIcon(icon_f8e6ed82f0d208dc43861c82e5443f40);
+            
+    
+            var marker_f80b15b2198775043c2f54bf2181f611 = L.marker(
+                [40.7478, -73.9995],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_bdfc4f6ecf796f7c2a88fd257e37c0e3 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e19\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_f80b15b2198775043c2f54bf2181f611.setIcon(div_icon_bdfc4f6ecf796f7c2a88fd257e37c0e3);
+            
+    
+            var marker_fe54abefbd07a4ca46fd5721a4f845c9 = L.marker(
+                [40.752, -74.002],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_5ecf22a3b664566e5b3246e598f1811f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_72c9d9193cb9f7f7acc3ef8a8cf8c92d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_053bcb49da3a3032e792fc78c8a15b81 = $(`<div id="html_053bcb49da3a3032e792fc78c8a15b81" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 20</b><br>             <b>Name:</b> Hudson Yards South<br>             <b>Zone:</b> West<br>             <b>Demand:</b> 4             </div>             </div>`)[0];
+                popup_72c9d9193cb9f7f7acc3ef8a8cf8c92d.setContent(html_053bcb49da3a3032e792fc78c8a15b81);
+            
+        
+
+        marker_fe54abefbd07a4ca46fd5721a4f845c9.bindPopup(popup_72c9d9193cb9f7f7acc3ef8a8cf8c92d)
+        ;
+
+        
+    
+    
+            marker_fe54abefbd07a4ca46fd5721a4f845c9.bindTooltip(
+                `<div>
+                     #20: Hudson Yards South
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fe54abefbd07a4ca46fd5721a4f845c9.setIcon(icon_5ecf22a3b664566e5b3246e598f1811f);
+            
+    
+            var marker_983e63114125109666cbc0ee42b76b16 = L.marker(
+                [40.752, -74.002],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_65929a715e0d6e65661e46371c133b47 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e20\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_983e63114125109666cbc0ee42b76b16.setIcon(div_icon_65929a715e0d6e65661e46371c133b47);
+            
+    
+            var marker_b5b1a1bbf4cb985d48619c3f8b83cab4 = L.marker(
+                [40.7505, -73.9934],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_d60925189f4f42de4d1470e7e2735e0b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_47d1a810191b7d437d69413b5f8257f0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8b754872ed48a3851904fb4a2ecfc3ae = $(`<div id="html_8b754872ed48a3851904fb4a2ecfc3ae" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 21</b><br>             <b>Name:</b> Madison Square Garden<br>             <b>Zone:</b> Central<br>             <b>Demand:</b> 4             </div>             </div>`)[0];
+                popup_47d1a810191b7d437d69413b5f8257f0.setContent(html_8b754872ed48a3851904fb4a2ecfc3ae);
+            
+        
+
+        marker_b5b1a1bbf4cb985d48619c3f8b83cab4.bindPopup(popup_47d1a810191b7d437d69413b5f8257f0)
+        ;
+
+        
+    
+    
+            marker_b5b1a1bbf4cb985d48619c3f8b83cab4.bindTooltip(
+                `<div>
+                     #21: Madison Square Garden
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b5b1a1bbf4cb985d48619c3f8b83cab4.setIcon(icon_d60925189f4f42de4d1470e7e2735e0b);
+            
+    
+            var marker_457eba2de92ba3d8ce7a6c20fc6e25be = L.marker(
+                [40.7505, -73.9934],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_e57f25984feec1087d95bfe8249d569f = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e21\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_457eba2de92ba3d8ce7a6c20fc6e25be.setIcon(div_icon_e57f25984feec1087d95bfe8249d569f);
+            
+    
+            var marker_ab965d886de59d15221792b0ca271459 = L.marker(
+                [40.7495, -73.992],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_1f62d07788729330dbecab0eb1db5af9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_429e31734f439d6942c9c58678ea0a6f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e9ea1c3bfde619754c90ff8771c5e87 = $(`<div id="html_0e9ea1c3bfde619754c90ff8771c5e87" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 22</b><br>             <b>Name:</b> Penn Plaza East<br>             <b>Zone:</b> Central<br>             <b>Demand:</b> 2             </div>             </div>`)[0];
+                popup_429e31734f439d6942c9c58678ea0a6f.setContent(html_0e9ea1c3bfde619754c90ff8771c5e87);
+            
+        
+
+        marker_ab965d886de59d15221792b0ca271459.bindPopup(popup_429e31734f439d6942c9c58678ea0a6f)
+        ;
+
+        
+    
+    
+            marker_ab965d886de59d15221792b0ca271459.bindTooltip(
+                `<div>
+                     #22: Penn Plaza East
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ab965d886de59d15221792b0ca271459.setIcon(icon_1f62d07788729330dbecab0eb1db5af9);
+            
+    
+            var marker_e97431ca2e2d0ec6687a388436933929 = L.marker(
+                [40.7495, -73.992],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_41b7b82098793318086630fe76d56baf = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e22\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_e97431ca2e2d0ec6687a388436933929.setIcon(div_icon_41b7b82098793318086630fe76d56baf);
+            
+    
+            var marker_a4978d4a165af07b6b89a6a037dc9597 = L.marker(
+                [40.7495, -73.9948],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_4b1484cf9b2b37a7d09f64ac897c5664 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1c100f23833fd48cbeb1df033aafc663 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_420b6f327d5b0e94f7159472737b85cd = $(`<div id="html_420b6f327d5b0e94f7159472737b85cd" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 23</b><br>             <b>Name:</b> Penn Plaza West<br>             <b>Zone:</b> Central<br>             <b>Demand:</b> 3             </div>             </div>`)[0];
+                popup_1c100f23833fd48cbeb1df033aafc663.setContent(html_420b6f327d5b0e94f7159472737b85cd);
+            
+        
+
+        marker_a4978d4a165af07b6b89a6a037dc9597.bindPopup(popup_1c100f23833fd48cbeb1df033aafc663)
+        ;
+
+        
+    
+    
+            marker_a4978d4a165af07b6b89a6a037dc9597.bindTooltip(
+                `<div>
+                     #23: Penn Plaza West
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a4978d4a165af07b6b89a6a037dc9597.setIcon(icon_4b1484cf9b2b37a7d09f64ac897c5664);
+            
+    
+            var marker_8754e8740b95857a4cefc96f200da67e = L.marker(
+                [40.7495, -73.9948],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_d70c7a112750c11f09b2d602f48a8872 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e23\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_8754e8740b95857a4cefc96f200da67e.setIcon(div_icon_d70c7a112750c11f09b2d602f48a8872);
+            
+    
+            var marker_1138312e71fe63fcc3490ecbed5c51fc = L.marker(
+                [40.7495, -73.9901],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_3d098f05a3566ec77106f869f682887a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "white",
+  "icon": "circle",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_630e0612c7e30672947067fff82ac18a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_765a466fa487061df28c383698bc3324 = $(`<div id="html_765a466fa487061df28c383698bc3324" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>📦 Location 24</b><br>             <b>Name:</b> 33rd & 7th Ave<br>             <b>Zone:</b> Central<br>             <b>Demand:</b> 2             </div>             </div>`)[0];
+                popup_630e0612c7e30672947067fff82ac18a.setContent(html_765a466fa487061df28c383698bc3324);
+            
+        
+
+        marker_1138312e71fe63fcc3490ecbed5c51fc.bindPopup(popup_630e0612c7e30672947067fff82ac18a)
+        ;
+
+        
+    
+    
+            marker_1138312e71fe63fcc3490ecbed5c51fc.bindTooltip(
+                `<div>
+                     #24: 33rd & 7th Ave
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1138312e71fe63fcc3490ecbed5c51fc.setIcon(icon_3d098f05a3566ec77106f869f682887a);
+            
+    
+            var marker_30c6534338a2fc0495050dcef2b98e2b = L.marker(
+                [40.7495, -73.9901],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_925bca6d5061333d973e8c07cc90147a = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e24\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_30c6534338a2fc0495050dcef2b98e2b.setIcon(div_icon_925bca6d5061333d973e8c07cc90147a);
+            
+    
+            var marker_556a556118a8b2e96869211b2aacb623 = L.marker(
+                [40.751, -73.989],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var icon_2bcd6f4865ba9fd3555e7d4d4169eecb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "tools",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bc3bf0a0c9f360b3a48afc2f6c6f16ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1b6645127e33a459ff4861894cb68f57 = $(`<div id="html_1b6645127e33a459ff4861894cb68f57" style="width: 100.0%; height: 100.0%;">             <div style='font-size: 12px;'>             <b>🏠 HOME DEPOT</b><br>             <b>Name:</b> Home Depot Manhattan<br>             <b>Zone:</b> Home Depot<br>             <b>Demand:</b> 5             </div>             </div>`)[0];
+                popup_bc3bf0a0c9f360b3a48afc2f6c6f16ab.setContent(html_1b6645127e33a459ff4861894cb68f57);
+            
+        
+
+        marker_556a556118a8b2e96869211b2aacb623.bindPopup(popup_bc3bf0a0c9f360b3a48afc2f6c6f16ab)
+        ;
+
+        
+    
+    
+            marker_556a556118a8b2e96869211b2aacb623.bindTooltip(
+                `<div>
+                     #25: Home Depot Manhattan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_556a556118a8b2e96869211b2aacb623.setIcon(icon_2bcd6f4865ba9fd3555e7d4d4169eecb);
+            
+    
+            var marker_1869780d2b9580d5396d4edccf76eb67 = L.marker(
+                [40.751, -73.989],
+                {
+}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+            var div_icon_9239c59d880d0246c842f9d71dca3719 = L.divIcon({
+  "html": "\u003cdiv style=\u0027font-size: 10pt; color: black; font-weight: bold; text-align: center;\u0027\u003e25\u003c/div\u003e",
+  "iconSize": [20, 20],
+  "className": "empty",
+});
+        
+    
+                marker_1869780d2b9580d5396d4edccf76eb67.setIcon(div_icon_9239c59d880d0246c842f9d71dca3719);
+            
+    
+            var poly_line_437db20b8922da3533a79a505256be19 = L.polyline(
+                [[40.751105, -73.992947], [40.751198, -73.993163], [40.751206, -73.993182], [40.751478, -73.993818], [40.751532, -73.993943], [40.751575, -73.993911], [40.751882, -73.993688], [40.75211, -73.993522], [40.752199, -73.993458], [40.752283, -73.993397], [40.752591, -73.993172], [40.752805, -73.993015], [40.752858, -73.992976], [40.752925, -73.992928], [40.75315, -73.992759], [40.753417, -73.99257], [40.753478, -73.992525], [40.753422, -73.992391], [40.753072, -73.991558], [40.75234, -73.989811], [40.752289, -73.989688], [40.752236, -73.989563], [40.75148, -73.987771], [40.751445, -73.987687], [40.751372, -73.987701], [40.751105, -73.987749], [40.750821, -73.9878]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_96643793f24cbc9934438094b5d29958 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_654eada27e3e711e30f545073825e4f5 = $(`<div id="html_654eada27e3e711e30f545073825e4f5" style="width: 100.0%; height: 100.0%;"><b>Vehicle 1</b><br>Midtown Manhattan Depot → Macy's Herald Square<br>Distance: 880m</div>`)[0];
+                popup_96643793f24cbc9934438094b5d29958.setContent(html_654eada27e3e711e30f545073825e4f5);
+            
+        
+
+        poly_line_437db20b8922da3533a79a505256be19.bindPopup(popup_96643793f24cbc9934438094b5d29958)
+        ;
+
+        
+    
+    
+            poly_line_437db20b8922da3533a79a505256be19.bindTooltip(
+                `<div>
+                     Vehicle 1: 880m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_6866c03fb1a15d96e4a200e16b096fa9 = L.polyline(
+                [[40.750821, -73.9878], [40.750809, -73.987802], [40.750764, -73.98781], [40.750684, -73.987825], [40.750723, -73.987915], [40.751608, -73.990014], [40.751659, -73.990134], [40.751715, -73.990267], [40.751943, -73.990808], [40.75201, -73.990966], [40.752665, -73.992517], [40.752801, -73.99284], [40.752858, -73.992976], [40.752925, -73.992928], [40.75315, -73.992759], [40.753417, -73.99257], [40.753478, -73.992525], [40.753422, -73.992391], [40.753072, -73.991558], [40.75234, -73.989811], [40.752289, -73.989688], [40.752236, -73.989563], [40.75148, -73.987771], [40.751445, -73.987687], [40.751369, -73.987506], [40.751139, -73.986963], [40.751082, -73.986828], [40.751041, -73.986729], [40.750084, -73.98446], [40.749905, -73.984038], [40.749786, -73.983755], [40.749728, -73.983617], [40.749679, -73.983503], [40.749097, -73.982122], [40.749055, -73.982023], [40.749013, -73.981923], [40.748478, -73.980656], [40.748452, -73.980594], [40.748414, -73.980503], [40.748358, -73.980371], [40.748336, -73.980319], [40.748295, -73.980223], [40.748278, -73.980182], [40.747913, -73.979317], [40.747761, -73.978955], [40.747753, -73.978936]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_a1f6e32ce3e340804eb0051c0c7962fe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a83076ded09dc6bddcf5836fc8cb166 = $(`<div id="html_7a83076ded09dc6bddcf5836fc8cb166" style="width: 100.0%; height: 100.0%;"><b>Vehicle 1</b><br>Macy's Herald Square → Murray Hill<br>Distance: 1903m</div>`)[0];
+                popup_a1f6e32ce3e340804eb0051c0c7962fe.setContent(html_7a83076ded09dc6bddcf5836fc8cb166);
+            
+        
+
+        poly_line_6866c03fb1a15d96e4a200e16b096fa9.bindPopup(popup_a1f6e32ce3e340804eb0051c0c7962fe)
+        ;
+
+        
+    
+    
+            poly_line_6866c03fb1a15d96e4a200e16b096fa9.bindTooltip(
+                `<div>
+                     Vehicle 1: 1903m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_69d30d1d4741d2b6719ff3ba60350fad = L.polyline(
+                [[40.747753, -73.978936], [40.747733, -73.97889], [40.747697, -73.978804], [40.74764, -73.978844], [40.747178, -73.979182], [40.747136, -73.979213], [40.74708, -73.979255], [40.747119, -73.979348], [40.74716, -73.979445], [40.747214, -73.979572], [40.747656, -73.98062], [40.747678, -73.980671], [40.747717, -73.980766], [40.747771, -73.980893], [40.747798, -73.980956], [40.747834, -73.981041], [40.748291, -73.982145], [40.748387, -73.982374], [40.74843, -73.982478], [40.748493, -73.982432], [40.748991, -73.982068], [40.749055, -73.982023], [40.749111, -73.98198], [40.749604, -73.981615], [40.749665, -73.98157], [40.74973, -73.981523], [40.750187, -73.981193], [40.75023, -73.981162], [40.750283, -73.981123], [40.750351, -73.981075], [40.750848, -73.980722], [40.750907, -73.980677], [40.750971, -73.980629], [40.751404, -73.980318], [40.751469, -73.980272], [40.751535, -73.980222], [40.751498, -73.980118], [40.750964, -73.978845], [40.750933, -73.978775], [40.750903, -73.978707], [40.750881, -73.978657], [40.750847, -73.978579], [40.750807, -73.978486], [40.750783, -73.978428], [40.7504, -73.977533], [40.750354, -73.977427], [40.750316, -73.977336]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_180540c0d14f2bd7ed8e2357f299110e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e7bec120fae21c2cbbc5d40c2b0fb02d = $(`<div id="html_e7bec120fae21c2cbbc5d40c2b0fb02d" style="width: 100.0%; height: 100.0%;"><b>Vehicle 1</b><br>Murray Hill → Grand Central South<br>Distance: 1075m</div>`)[0];
+                popup_180540c0d14f2bd7ed8e2357f299110e.setContent(html_e7bec120fae21c2cbbc5d40c2b0fb02d);
+            
+        
+
+        poly_line_69d30d1d4741d2b6719ff3ba60350fad.bindPopup(popup_180540c0d14f2bd7ed8e2357f299110e)
+        ;
+
+        
+    
+    
+            poly_line_69d30d1d4741d2b6719ff3ba60350fad.bindTooltip(
+                `<div>
+                     Vehicle 1: 1075m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_2026ef1b3ede611e1bee75785ce61e04 = L.polyline(
+                [[40.750316, -73.977336], [40.750233, -73.977141], [40.750211, -73.977088], [40.75017, -73.976991], [40.750109, -73.977035], [40.749649, -73.97737], [40.749605, -73.977402], [40.749554, -73.977439], [40.749598, -73.97754], [40.749898, -73.978217], [40.749939, -73.978351], [40.749948, -73.978377], [40.74996, -73.978416], [40.750124, -73.978804], [40.750151, -73.978868], [40.750191, -73.978962], [40.750247, -73.979091], [40.750272, -73.97915], [40.750309, -73.979237], [40.750326, -73.979277], [40.750571, -73.979877], [40.750728, -73.980249], [40.750746, -73.980292], [40.750866, -73.980578], [40.750907, -73.980677], [40.750949, -73.980774], [40.75113, -73.9812]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_e5d3c5e314cc89d056f0100b7b7ae6b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9106cadad588f67c7654ab156891634a = $(`<div id="html_9106cadad588f67c7654ab156891634a" style="width: 100.0%; height: 100.0%;"><b>Vehicle 1</b><br>Grand Central South → 38th & Lexington<br>Distance: 474m</div>`)[0];
+                popup_e5d3c5e314cc89d056f0100b7b7ae6b2.setContent(html_9106cadad588f67c7654ab156891634a);
+            
+        
+
+        poly_line_2026ef1b3ede611e1bee75785ce61e04.bindPopup(popup_e5d3c5e314cc89d056f0100b7b7ae6b2)
+        ;
+
+        
+    
+    
+            poly_line_2026ef1b3ede611e1bee75785ce61e04.bindTooltip(
+                `<div>
+                     Vehicle 1: 474m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_9633d30872f8c6ca7db299960569cbd1 = L.polyline(
+                [[40.75113, -73.9812], [40.751338, -73.98169], [40.751529, -73.98215], [40.751581, -73.982276], [40.751635, -73.982402], [40.752069, -73.983421], [40.752888, -73.985357], [40.752944, -73.985484], [40.752993, -73.985446], [40.7535, -73.985082], [40.753559, -73.98504], [40.753503, -73.984909], [40.753358, -73.984563], [40.752977, -73.983657]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_3b1020ce1d703d2f3ab95c845d20b79e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bb7e6cb26eefa346d32cb00e2610acdf = $(`<div id="html_bb7e6cb26eefa346d32cb00e2610acdf" style="width: 100.0%; height: 100.0%;"><b>Vehicle 1</b><br>38th & Lexington → Bryant Park Cafe<br>Distance: 625m</div>`)[0];
+                popup_3b1020ce1d703d2f3ab95c845d20b79e.setContent(html_bb7e6cb26eefa346d32cb00e2610acdf);
+            
+        
+
+        poly_line_9633d30872f8c6ca7db299960569cbd1.bindPopup(popup_3b1020ce1d703d2f3ab95c845d20b79e)
+        ;
+
+        
+    
+    
+            poly_line_9633d30872f8c6ca7db299960569cbd1.bindTooltip(
+                `<div>
+                     Vehicle 1: 625m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_0d2a30f2b3f60fabc3cde77e22965a86 = L.polyline(
+                [[40.752977, -73.983657], [40.752846, -73.983346], [40.752251, -73.981934], [40.752205, -73.981824], [40.752138, -73.981872], [40.751649, -73.982226], [40.751581, -73.982276], [40.751635, -73.982402], [40.752069, -73.983421], [40.752392, -73.984185]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_2d0aebcb985d5008392d3287886dcd4c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b836ed8b2bcef0504ce64a893768db5 = $(`<div id="html_2b836ed8b2bcef0504ce64a893768db5" style="width: 100.0%; height: 100.0%;"><b>Vehicle 1</b><br>Bryant Park Cafe → 42nd & Park Ave<br>Distance: 441m</div>`)[0];
+                popup_2d0aebcb985d5008392d3287886dcd4c.setContent(html_2b836ed8b2bcef0504ce64a893768db5);
+            
+        
+
+        poly_line_0d2a30f2b3f60fabc3cde77e22965a86.bindPopup(popup_2d0aebcb985d5008392d3287886dcd4c)
+        ;
+
+        
+    
+    
+            poly_line_0d2a30f2b3f60fabc3cde77e22965a86.bindTooltip(
+                `<div>
+                     Vehicle 1: 441m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_aa84e98e55a80c202d3369f339dce78b = L.polyline(
+                [[40.752392, -73.984185], [40.752888, -73.985357], [40.752944, -73.985484], [40.753004, -73.985624], [40.75357, -73.98695], [40.753622, -73.98707], [40.753555, -73.987092], [40.753531, -73.987099], [40.753363, -73.987153], [40.75334, -73.987163], [40.753225, -73.987224], [40.753201, -73.987234], [40.752977, -73.987304], [40.752961, -73.987309], [40.75293, -73.987323], [40.752887, -73.987344], [40.752842, -73.987365], [40.752255, -73.98752], [40.75219, -73.987537], [40.752116, -73.987552], [40.751512, -73.987673], [40.751445, -73.987687], [40.751372, -73.987701], [40.751105, -73.987749], [40.750809, -73.987802], [40.750764, -73.98781], [40.750684, -73.987825], [40.750723, -73.987915], [40.751138, -73.988899]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_543ba2f56d86e6a0430e2b04766c9aec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b09b62aab90dd88b39afdaa420c4d2e5 = $(`<div id="html_b09b62aab90dd88b39afdaa420c4d2e5" style="width: 100.0%; height: 100.0%;"><b>Vehicle 1</b><br>42nd & Park Ave → Home Depot Manhattan<br>Distance: 716m</div>`)[0];
+                popup_543ba2f56d86e6a0430e2b04766c9aec.setContent(html_b09b62aab90dd88b39afdaa420c4d2e5);
+            
+        
+
+        poly_line_aa84e98e55a80c202d3369f339dce78b.bindPopup(popup_543ba2f56d86e6a0430e2b04766c9aec)
+        ;
+
+        
+    
+    
+            poly_line_aa84e98e55a80c202d3369f339dce78b.bindTooltip(
+                `<div>
+                     Vehicle 1: 716m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_cb1909c039feb4c447ec20192cb8e755 = L.polyline(
+                [[40.751138, -73.988899], [40.751608, -73.990014], [40.751659, -73.990134], [40.751604, -73.990175], [40.751094, -73.99055], [40.751009, -73.990612], [40.750921, -73.990677], [40.750389, -73.991065], [40.750342, -73.991099], [40.750272, -73.991149], [40.750224, -73.991184], [40.749791, -73.991501], [40.749768, -73.991518], [40.749706, -73.991563], [40.749668, -73.991591], [40.749635, -73.991615], [40.749151, -73.99197], [40.749101, -73.992006], [40.749152, -73.992127], [40.7493, -73.992479], [40.749464, -73.992871], [40.749562, -73.993103], [40.749613, -73.993226], [40.749638, -73.993284], [40.74966, -73.993337], [40.750242, -73.994717], [40.750294, -73.994845], [40.750368, -73.994791], [40.750792, -73.994481], [40.750882, -73.994416], [40.751464, -73.993993], [40.751532, -73.993943], [40.751478, -73.993818], [40.751206, -73.993182], [40.751198, -73.993163], [40.751105, -73.992947]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_83fd805c7d938186663b9a3ff705b43e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_15c98acb7d3845927d251df6f5e314ba = $(`<div id="html_15c98acb7d3845927d251df6f5e314ba" style="width: 100.0%; height: 100.0%;"><b>Vehicle 1</b><br>Home Depot Manhattan → Midtown Manhattan Depot<br>Distance: 972m</div>`)[0];
+                popup_83fd805c7d938186663b9a3ff705b43e.setContent(html_15c98acb7d3845927d251df6f5e314ba);
+            
+        
+
+        poly_line_cb1909c039feb4c447ec20192cb8e755.bindPopup(popup_83fd805c7d938186663b9a3ff705b43e)
+        ;
+
+        
+    
+    
+            poly_line_cb1909c039feb4c447ec20192cb8e755.bindTooltip(
+                `<div>
+                     Vehicle 1: 972m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_3bd3f8d7152f5e470675bc4fe143e0d4 = L.polyline(
+                [[40.751105, -73.992947], [40.751198, -73.993163], [40.751206, -73.993182], [40.751478, -73.993818], [40.751532, -73.993943], [40.751575, -73.993911], [40.751882, -73.993688], [40.75211, -73.993522], [40.752199, -73.993458], [40.752283, -73.993397], [40.752591, -73.993172], [40.752805, -73.993015], [40.752858, -73.992976], [40.752925, -73.992928], [40.75315, -73.992759], [40.753417, -73.99257], [40.753478, -73.992525], [40.753537, -73.992482], [40.754036, -73.992119], [40.754091, -73.992079], [40.754157, -73.992031], [40.75465, -73.991674], [40.754707, -73.991633], [40.754647, -73.991488], [40.753557, -73.988923], [40.753503, -73.988798], [40.75345, -73.988673], [40.7531, -73.987848]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_281f9403dc8bdf91e1fa680ad9a03228 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1a480caf0f2d3abd7f60220b01d9417b = $(`<div id="html_1a480caf0f2d3abd7f60220b01d9417b" style="width: 100.0%; height: 100.0%;"><b>Vehicle 2</b><br>Midtown Manhattan Depot → 40th & Broadway<br>Distance: 865m</div>`)[0];
+                popup_281f9403dc8bdf91e1fa680ad9a03228.setContent(html_1a480caf0f2d3abd7f60220b01d9417b);
+            
+        
+
+        poly_line_3bd3f8d7152f5e470675bc4fe143e0d4.bindPopup(popup_281f9403dc8bdf91e1fa680ad9a03228)
+        ;
+
+        
+    
+    
+            poly_line_3bd3f8d7152f5e470675bc4fe143e0d4.bindTooltip(
+                `<div>
+                     Vehicle 2: 865m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_faa0656eaabab8d888c0c39fe9038eb0 = L.polyline(
+                [[40.7531, -73.987848], [40.752934, -73.987458], [40.752887, -73.987344], [40.752818, -73.987182], [40.752375, -73.986084], [40.752317, -73.985947], [40.752373, -73.985905], [40.752877, -73.98553], [40.752944, -73.985484], [40.752993, -73.985446], [40.7535, -73.985082], [40.753559, -73.98504], [40.753619, -73.984996], [40.753691, -73.984945], [40.754119, -73.984637], [40.754177, -73.984596], [40.754233, -73.984728], [40.754464, -73.985276], [40.754519, -73.985236], [40.754632, -73.985152], [40.754643, -73.985178], [40.754683, -73.985149], [40.754797, -73.985069], [40.754851, -73.98503], [40.754915, -73.984984], [40.754947, -73.98506], [40.754974, -73.98512]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_ae52944c7935458dd748af6709fdf43e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6f853f1caab90f1bb552d9b0cf95a2f2 = $(`<div id="html_6f853f1caab90f1bb552d9b0cf95a2f2" style="width: 100.0%; height: 100.0%;"><b>Vehicle 2</b><br>40th & Broadway → Times Square Plaza<br>Distance: 556m</div>`)[0];
+                popup_ae52944c7935458dd748af6709fdf43e.setContent(html_6f853f1caab90f1bb552d9b0cf95a2f2);
+            
+        
+
+        poly_line_faa0656eaabab8d888c0c39fe9038eb0.bindPopup(popup_ae52944c7935458dd748af6709fdf43e)
+        ;
+
+        
+    
+    
+            poly_line_faa0656eaabab8d888c0c39fe9038eb0.bindTooltip(
+                `<div>
+                     Vehicle 2: 556m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_ecef0525c8ce1d4ac1b90ba002a7aae4 = L.polyline(
+                [[40.754974, -73.98512], [40.754947, -73.98506], [40.754915, -73.984984], [40.754851, -73.98503], [40.754797, -73.985069], [40.754683, -73.985149], [40.754643, -73.985178], [40.754632, -73.985152], [40.754519, -73.985236], [40.754464, -73.985276], [40.754476, -73.985305], [40.754515, -73.985394], [40.754528, -73.985424], [40.754554, -73.985485], [40.754988, -73.986512], [40.755008, -73.986559], [40.755036, -73.986627], [40.755054, -73.986671], [40.7551, -73.986779], [40.755323, -73.987325], [40.755373, -73.987447], [40.75532, -73.987485], [40.75503, -73.987692], [40.754811, -73.987848], [40.754755, -73.987888], [40.754705, -73.98777], [40.754673, -73.987694]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_6e70628cea953d665ee254bcf1ef46df = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_22ec6fddd30288396cf70f22b96f85d6 = $(`<div id="html_22ec6fddd30288396cf70f22b96f85d6" style="width: 100.0%; height: 100.0%;"><b>Vehicle 2</b><br>Times Square Plaza → 42nd & 7th Ave<br>Distance: 378m</div>`)[0];
+                popup_6e70628cea953d665ee254bcf1ef46df.setContent(html_22ec6fddd30288396cf70f22b96f85d6);
+            
+        
+
+        poly_line_ecef0525c8ce1d4ac1b90ba002a7aae4.bindPopup(popup_6e70628cea953d665ee254bcf1ef46df)
+        ;
+
+        
+    
+    
+            poly_line_ecef0525c8ce1d4ac1b90ba002a7aae4.bindTooltip(
+                `<div>
+                     Vehicle 2: 378m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_f00a81fd3fe33bf63e05646eeab8a695 = L.polyline(
+                [[40.754673, -73.987694], [40.754586, -73.987488], [40.754381, -73.987004], [40.754351, -73.986933], [40.754335, -73.986898], [40.754314, -73.986848], [40.754263, -73.986725], [40.753616, -73.985178], [40.753559, -73.98504], [40.753619, -73.984996], [40.753691, -73.984945], [40.754119, -73.984637], [40.754177, -73.984596], [40.754233, -73.984728], [40.754464, -73.985276], [40.754476, -73.985305], [40.754515, -73.985394], [40.754528, -73.985424], [40.754554, -73.985485], [40.754988, -73.986512], [40.755008, -73.986559], [40.755036, -73.986627], [40.755054, -73.986671], [40.7551, -73.986779], [40.755323, -73.987325], [40.755373, -73.987447], [40.755411, -73.987537], [40.755794, -73.988444], [40.755835, -73.988541], [40.756508, -73.990137], [40.756567, -73.990276], [40.756631, -73.990429], [40.7571, -73.991524]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_4c339535f585e19c031cf22f42d1f710 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cfdd3ff84176b5e5171a6671b4a53223 = $(`<div id="html_cfdd3ff84176b5e5171a6671b4a53223" style="width: 100.0%; height: 100.0%;"><b>Vehicle 2</b><br>42nd & 7th Ave → 42nd & 9th Ave<br>Distance: 1003m</div>`)[0];
+                popup_4c339535f585e19c031cf22f42d1f710.setContent(html_cfdd3ff84176b5e5171a6671b4a53223);
+            
+        
+
+        poly_line_f00a81fd3fe33bf63e05646eeab8a695.bindPopup(popup_4c339535f585e19c031cf22f42d1f710)
+        ;
+
+        
+    
+    
+            poly_line_f00a81fd3fe33bf63e05646eeab8a695.bindTooltip(
+                `<div>
+                     Vehicle 2: 1003m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_07f5e62a4d815aeec86eb26c85e7521e = L.polyline(
+                [[40.7571, -73.991524], [40.757122, -73.991575], [40.757613, -73.99273], [40.757756, -73.992944], [40.757777, -73.992979], [40.75784, -73.993073], [40.757726, -73.993151], [40.757317, -73.993457], [40.757215, -73.993534], [40.757154, -73.993579], [40.757094, -73.993622], [40.756799, -73.99383], [40.756591, -73.993977], [40.756532, -73.994018], [40.756473, -73.994061], [40.756105, -73.99433], [40.755972, -73.994428], [40.755905, -73.994475], [40.755856, -73.994513], [40.755472, -73.9948], [40.755368, -73.994876], [40.755292, -73.994934], [40.755239, -73.994973], [40.754881, -73.995239], [40.754748, -73.99534], [40.754686, -73.995383], [40.754621, -73.995234], [40.754367, -73.994646], [40.75428, -73.994439], [40.75364, -73.992912], [40.753536, -73.992663], [40.753524, -73.992634], [40.753478, -73.992525], [40.753422, -73.992391], [40.753072, -73.991558], [40.75234, -73.989811], [40.752289, -73.989688], [40.752224, -73.989733], [40.751721, -73.99009], [40.751659, -73.990134], [40.751715, -73.990267], [40.751943, -73.990808], [40.75201, -73.990966], [40.752665, -73.992517], [40.752801, -73.99284], [40.752858, -73.992976], [40.752904, -73.993084], [40.752917, -73.993115], [40.753413, -73.994291]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_304603b270479e7f6ea925089b5346fb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8dac1bc677618f55278244ccfdf12473 = $(`<div id="html_8dac1bc677618f55278244ccfdf12473" style="width: 100.0%; height: 100.0%;"><b>Vehicle 2</b><br>42nd & 9th Ave → 38th & 9th Ave<br>Distance: 1586m</div>`)[0];
+                popup_304603b270479e7f6ea925089b5346fb.setContent(html_8dac1bc677618f55278244ccfdf12473);
+            
+        
+
+        poly_line_07f5e62a4d815aeec86eb26c85e7521e.bindPopup(popup_304603b270479e7f6ea925089b5346fb)
+        ;
+
+        
+    
+    
+            poly_line_07f5e62a4d815aeec86eb26c85e7521e.bindTooltip(
+                `<div>
+                     Vehicle 2: 1586m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_53bf57762c5c094bb47cad219be81658 = L.polyline(
+                [[40.753413, -73.994291], [40.753569, -73.994661], [40.753651, -73.994854], [40.753792, -73.995188], [40.753816, -73.995247], [40.754002, -73.995683], [40.754071, -73.995843], [40.75401, -73.995887], [40.753705, -73.996103], [40.753495, -73.996256], [40.753408, -73.996318], [40.753305, -73.996391], [40.7529, -73.996692], [40.752795, -73.996769], [40.752742, -73.996817], [40.752683, -73.996872], [40.752213, -73.997212], [40.752128, -73.997274], [40.751571, -73.997684], [40.751507, -73.997725], [40.751449, -73.997765], [40.751158, -73.997978], [40.751069, -73.998043], [40.750974, -73.998111], [40.750907, -73.998156], [40.750839, -73.997996], [40.750702, -73.997707], [40.74993, -73.995893], [40.749735, -73.995438], [40.749722, -73.995406], [40.749674, -73.995296], [40.74973, -73.995256], [40.749953, -73.995094], [40.750238, -73.994887], [40.750294, -73.994845], [40.750368, -73.994791], [40.750792, -73.994481], [40.750882, -73.994416], [40.751464, -73.993993], [40.751532, -73.993943], [40.751478, -73.993818], [40.751206, -73.993182], [40.751198, -73.993163], [40.751105, -73.992947]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_9b6c018d7939d26844e2633ea6c64a11 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aa15449369813099d6160d9269dbbbdd = $(`<div id="html_aa15449369813099d6160d9269dbbbdd" style="width: 100.0%; height: 100.0%;"><b>Vehicle 2</b><br>38th & 9th Ave → Midtown Manhattan Depot<br>Distance: 1162m</div>`)[0];
+                popup_9b6c018d7939d26844e2633ea6c64a11.setContent(html_aa15449369813099d6160d9269dbbbdd);
+            
+        
+
+        poly_line_53bf57762c5c094bb47cad219be81658.bindPopup(popup_9b6c018d7939d26844e2633ea6c64a11)
+        ;
+
+        
+    
+    
+            poly_line_53bf57762c5c094bb47cad219be81658.bindTooltip(
+                `<div>
+                     Vehicle 2: 1162m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_bd39bbf41458675ee3fba13ef4ba9ae8 = L.polyline(
+                [[40.751105, -73.992947], [40.751198, -73.993163], [40.751206, -73.993182], [40.751478, -73.993818], [40.751532, -73.993943], [40.751575, -73.993911], [40.751882, -73.993688], [40.75211, -73.993522], [40.752199, -73.993458], [40.752148, -73.99333], [40.751884, -73.992686], [40.751611, -73.99204], [40.751577, -73.991958], [40.75154, -73.991868], [40.751068, -73.990753], [40.751009, -73.990612], [40.750921, -73.990677], [40.750389, -73.991065], [40.750342, -73.991099], [40.750272, -73.991149], [40.750224, -73.991184], [40.749791, -73.991501], [40.749768, -73.991518], [40.749706, -73.991563], [40.749668, -73.991591], [40.749635, -73.991615], [40.749408, -73.991781]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_18331db72b5e2c8c84c9ef3432477cc4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c725f8b4cd75db244e9cee2ddae7512c = $(`<div id="html_c725f8b4cd75db244e9cee2ddae7512c" style="width: 100.0%; height: 100.0%;"><b>Vehicle 3</b><br>Midtown Manhattan Depot → Penn Plaza East<br>Distance: 659m</div>`)[0];
+                popup_18331db72b5e2c8c84c9ef3432477cc4.setContent(html_c725f8b4cd75db244e9cee2ddae7512c);
+            
+        
+
+        poly_line_bd39bbf41458675ee3fba13ef4ba9ae8.bindPopup(popup_18331db72b5e2c8c84c9ef3432477cc4)
+        ;
+
+        
+    
+    
+            poly_line_bd39bbf41458675ee3fba13ef4ba9ae8.bindTooltip(
+                `<div>
+                     Vehicle 3: 659m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_6920d2c35b7ec443e3c16f3ab0198703 = L.polyline(
+                [[40.749408, -73.991781], [40.749151, -73.99197], [40.749101, -73.992006], [40.749152, -73.992127], [40.7493, -73.992479], [40.749464, -73.992871], [40.749562, -73.993103], [40.749613, -73.993226], [40.749638, -73.993284], [40.74966, -73.993337], [40.750242, -73.994717], [40.750294, -73.994845], [40.750368, -73.994791], [40.750792, -73.994481], [40.750882, -73.994416], [40.751464, -73.993993], [40.751532, -73.993943], [40.751478, -73.993818], [40.751206, -73.993182], [40.751198, -73.993163], [40.751105, -73.992947]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_824b750a3f335b2d74a82c0dd89fdc9e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_979b5ba2abae3d8cd0fbe750faad67cf = $(`<div id="html_979b5ba2abae3d8cd0fbe750faad67cf" style="width: 100.0%; height: 100.0%;"><b>Vehicle 3</b><br>Penn Plaza East → Madison Square Garden<br>Distance: 567m</div>`)[0];
+                popup_824b750a3f335b2d74a82c0dd89fdc9e.setContent(html_979b5ba2abae3d8cd0fbe750faad67cf);
+            
+        
+
+        poly_line_6920d2c35b7ec443e3c16f3ab0198703.bindPopup(popup_824b750a3f335b2d74a82c0dd89fdc9e)
+        ;
+
+        
+    
+    
+            poly_line_6920d2c35b7ec443e3c16f3ab0198703.bindTooltip(
+                `<div>
+                     Vehicle 3: 567m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_a47cb9a40936feee7996ea3da20931eb = L.polyline(
+                [[40.751105, -73.992947], [40.751198, -73.993163], [40.751206, -73.993182], [40.751478, -73.993818], [40.751532, -73.993943], [40.751575, -73.993911], [40.751882, -73.993688], [40.75211, -73.993522], [40.752199, -73.993458], [40.752148, -73.99333], [40.751884, -73.992686], [40.751611, -73.99204], [40.751577, -73.991958], [40.75154, -73.991868], [40.751068, -73.990753], [40.751009, -73.990612], [40.750921, -73.990677], [40.750389, -73.991065], [40.750342, -73.991099], [40.750272, -73.991149], [40.750224, -73.991184], [40.749791, -73.991501], [40.749768, -73.991518], [40.749706, -73.991563], [40.749655, -73.991441], [40.749448, -73.99095], [40.749189, -73.990325]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_27ed80bd8fd60ee64b3e953e3fd97a8d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_364683553792419b170b6919e5473cf9 = $(`<div id="html_364683553792419b170b6919e5473cf9" style="width: 100.0%; height: 100.0%;"><b>Vehicle 3</b><br>Madison Square Garden → 33rd & 7th Ave<br>Distance: 740m</div>`)[0];
+                popup_27ed80bd8fd60ee64b3e953e3fd97a8d.setContent(html_364683553792419b170b6919e5473cf9);
+            
+        
+
+        poly_line_a47cb9a40936feee7996ea3da20931eb.bindPopup(popup_27ed80bd8fd60ee64b3e953e3fd97a8d)
+        ;
+
+        
+    
+    
+            poly_line_a47cb9a40936feee7996ea3da20931eb.bindTooltip(
+                `<div>
+                     Vehicle 3: 740m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_8156fc579f84836ea19133debf0fb50b = L.polyline(
+                [[40.749189, -73.990325], [40.748953, -73.989755], [40.748561, -73.988837], [40.748508, -73.988695], [40.748468, -73.988587], [40.748379, -73.988372], [40.748338, -73.988274], [40.748305, -73.988194], [40.748234, -73.988207], [40.748096, -73.988219], [40.748027, -73.98822], [40.747779, -73.988268], [40.747734, -73.988285], [40.747619, -73.988315], [40.747546, -73.988333], [40.747583, -73.988419], [40.747739, -73.988786], [40.747845, -73.989038], [40.747896, -73.989157], [40.747966, -73.989317], [40.748114, -73.989673], [40.748376, -73.990293], [40.748921, -73.99158], [40.74905, -73.991884], [40.749101, -73.992006], [40.749152, -73.992127], [40.7493, -73.992479], [40.749464, -73.992871], [40.749562, -73.993103], [40.749613, -73.993226], [40.749638, -73.993284], [40.74966, -73.993337], [40.750242, -73.994717], [40.750294, -73.994845], [40.750354, -73.994988], [40.7504, -73.995098], [40.750468, -73.99526], [40.750514, -73.99537], [40.75144, -73.997562], [40.751507, -73.997725], [40.751449, -73.997765], [40.751158, -73.997978], [40.751069, -73.998043], [40.750974, -73.998111], [40.750907, -73.998156], [40.750827, -73.998212], [40.75033, -73.998574], [40.750275, -73.998612], [40.750319, -73.998724], [40.750537, -73.999241], [40.751309, -74.001071], [40.751381, -74.001242], [40.751403, -74.001293], [40.751459, -74.001418], [40.751522, -74.001562], [40.751764, -74.002141], [40.751775, -74.002166]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_e143941d8799be245fd225ddbd27f8ef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7fb9138515ed128a4b332873c5c30022 = $(`<div id="html_7fb9138515ed128a4b332873c5c30022" style="width: 100.0%; height: 100.0%;"><b>Vehicle 3</b><br>33rd & 7th Ave → Hudson Yards South<br>Distance: 1697m</div>`)[0];
+                popup_e143941d8799be245fd225ddbd27f8ef.setContent(html_7fb9138515ed128a4b332873c5c30022);
+            
+        
+
+        poly_line_8156fc579f84836ea19133debf0fb50b.bindPopup(popup_e143941d8799be245fd225ddbd27f8ef)
+        ;
+
+        
+    
+    
+            poly_line_8156fc579f84836ea19133debf0fb50b.bindTooltip(
+                `<div>
+                     Vehicle 3: 1697m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_ea383d32deef61cabe857ca4dd40cc0b = L.polyline(
+                [[40.751775, -74.002166], [40.752217, -74.003213], [40.752262, -74.003323], [40.75239, -74.003624], [40.752563, -74.004031], [40.752584, -74.004079], [40.752604, -74.004127], [40.752665, -74.004269], [40.752591, -74.004323], [40.75209, -74.00468], [40.752031, -74.004722], [40.751962, -74.004772], [40.751468, -74.005131], [40.751404, -74.005177], [40.751347, -74.005219], [40.750897, -74.005552], [40.750856, -74.005581], [40.750808, -74.005622], [40.750736, -74.005679], [40.750253, -74.006018], [40.750178, -74.006071], [40.750104, -74.006123], [40.749944, -74.006198], [40.749618, -74.006412], [40.749588, -74.006421], [40.749562, -74.006429], [40.749539, -74.006424], [40.74952, -74.006411], [40.749503, -74.00639], [40.749492, -74.006366], [40.748418, -74.003833], [40.748355, -74.003684], [40.7483, -74.003553], [40.747225, -74.000982], [40.747197, -74.000923], [40.747171, -74.000868], [40.74715, -74.000828], [40.747124, -74.000779], [40.747107, -74.000748], [40.747087, -74.000718], [40.747046, -74.000656], [40.747017, -74.000616], [40.746986, -74.000577], [40.746957, -74.000546], [40.746921, -74.00051], [40.746889, -74.000483], [40.746851, -74.000454], [40.746817, -74.00043], [40.746761, -74.000396], [40.746725, -74.000374], [40.74669, -74.000349], [40.746656, -74.00032], [40.74662, -74.000286], [40.746588, -74.000251], [40.746555, -74.000213], [40.746527, -74.000175], [40.746498, -74.000132], [40.746472, -74.000088], [40.746451, -74.000047], [40.746429, -74.000003], [40.746407, -73.999952], [40.746231, -73.999534], [40.746205, -73.999474], [40.746152, -73.999344], [40.746123, -73.999272], [40.746104, -73.999219], [40.746086, -73.99916], [40.746073, -73.999115], [40.746062, -73.999067], [40.746053, -73.999013], [40.746047, -73.998958], [40.746041, -73.998899], [40.746039, -73.998843], [40.74604, -73.998786], [40.746042, -73.998733], [40.746047, -73.998679], [40.746054, -73.998629], [40.746056, -73.998581], [40.746058, -73.998523], [40.746057, -73.998465], [40.746054, -73.998416], [40.746048, -73.998359], [40.746041, -73.998307], [40.746025, -73.998219], [40.746012, -73.998154], [40.746003, -73.998114], [40.745992, -73.998073], [40.745981, -73.998035], [40.745965, -73.99799], [40.746025, -73.997945], [40.746199, -73.997823], [40.746306, -73.997746], [40.746525, -73.997589], [40.74658, -73.99755], [40.746644, -73.997701], [40.746903, -73.998321], [40.747037, -73.998639], [40.747242, -73.999129], [40.74726, -73.999173], [40.747487, -73.999725]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_c08ad8e8af88e249d1e8d1d8968a323c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bc000b7c10ab712cfc43b8851ae3d7e4 = $(`<div id="html_bc000b7c10ab712cfc43b8851ae3d7e4" style="width: 100.0%; height: 100.0%;"><b>Vehicle 3</b><br>Hudson Yards South → 30th & 10th Ave<br>Distance: 1716m</div>`)[0];
+                popup_c08ad8e8af88e249d1e8d1d8968a323c.setContent(html_bc000b7c10ab712cfc43b8851ae3d7e4);
+            
+        
+
+        poly_line_ea383d32deef61cabe857ca4dd40cc0b.bindPopup(popup_c08ad8e8af88e249d1e8d1d8968a323c)
+        ;
+
+        
+    
+    
+            poly_line_ea383d32deef61cabe857ca4dd40cc0b.bindTooltip(
+                `<div>
+                     Vehicle 3: 1716m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_64278363f28d5c404b4acdc26c4ebd7d = L.polyline(
+                [[40.747487, -73.999725], [40.747608, -74.000018], [40.747712, -74.000271], [40.747791, -74.000422], [40.747844, -74.000527], [40.74802, -74.000943], [40.748918, -74.003105], [40.748974, -74.003236], [40.749044, -74.003185], [40.749499, -74.002859], [40.749533, -74.002833], [40.749611, -74.002775], [40.749657, -74.002741], [40.750155, -74.002369], [40.750229, -74.002314], [40.750273, -74.002282], [40.750777, -74.001919], [40.750828, -74.001882], [40.750885, -74.00184], [40.751349, -74.001496], [40.751383, -74.001473], [40.751459, -74.001418], [40.751506, -74.001383], [40.751963, -74.001059], [40.752033, -74.00101], [40.752075, -74.00098], [40.752017, -74.000844], [40.752006, -74.000816], [40.751951, -74.000683], [40.751677, -74.000028], [40.751374, -73.999305], [40.751271, -73.998999], [40.751164, -73.998761], [40.750954, -73.998263], [40.750907, -73.998156], [40.750839, -73.997996], [40.750702, -73.997707], [40.750425, -73.997056]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_41f936da597f080f9ea392a76e50aadb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bf59a925d31e8b27eb24a3ea656a98d7 = $(`<div id="html_bf59a925d31e8b27eb24a3ea656a98d7" style="width: 100.0%; height: 100.0%;"><b>Vehicle 3</b><br>30th & 10th Ave → 34th & 9th Ave<br>Distance: 1112m</div>`)[0];
+                popup_41f936da597f080f9ea392a76e50aadb.setContent(html_bf59a925d31e8b27eb24a3ea656a98d7);
+            
+        
+
+        poly_line_64278363f28d5c404b4acdc26c4ebd7d.bindPopup(popup_41f936da597f080f9ea392a76e50aadb)
+        ;
+
+        
+    
+    
+            poly_line_64278363f28d5c404b4acdc26c4ebd7d.bindTooltip(
+                `<div>
+                     Vehicle 3: 1112m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_682171db0ca563845290fad396fbc303 = L.polyline(
+                [[40.750425, -73.997056], [40.74993, -73.995893], [40.749735, -73.995438], [40.749722, -73.995406], [40.749674, -73.995296], [40.74962, -73.995168], [40.749472, -73.994821]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_f5db000179f993758a0a4b564ab25c00 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_401c196774f9553b7f3324ae6f501108 = $(`<div id="html_401c196774f9553b7f3324ae6f501108" style="width: 100.0%; height: 100.0%;"><b>Vehicle 3</b><br>34th & 9th Ave → Penn Plaza West<br>Distance: 216m</div>`)[0];
+                popup_f5db000179f993758a0a4b564ab25c00.setContent(html_401c196774f9553b7f3324ae6f501108);
+            
+        
+
+        poly_line_682171db0ca563845290fad396fbc303.bindPopup(popup_f5db000179f993758a0a4b564ab25c00)
+        ;
+
+        
+    
+    
+            poly_line_682171db0ca563845290fad396fbc303.bindTooltip(
+                `<div>
+                     Vehicle 3: 216m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_f6688a9de5910e4851a842920fdf0e5b = L.polyline(
+                [[40.749472, -73.994821], [40.748868, -73.993401], [40.748727, -73.993069], [40.748547, -73.992647], [40.748528, -73.992601], [40.748469, -73.992463], [40.748412, -73.992505], [40.747914, -73.992868], [40.747863, -73.992905], [40.747921, -73.993038], [40.748195, -73.993691], [40.749005, -73.995614], [40.749056, -73.995729], [40.749105, -73.995693], [40.749622, -73.995333], [40.749674, -73.995296], [40.74973, -73.995256], [40.749953, -73.995094], [40.750238, -73.994887], [40.750294, -73.994845], [40.750368, -73.994791], [40.750792, -73.994481], [40.750882, -73.994416], [40.751464, -73.993993], [40.751532, -73.993943], [40.751478, -73.993818], [40.751206, -73.993182], [40.751198, -73.993163], [40.751105, -73.992947]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_f5e1e5184f7fbc1581c1093666911651 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e2c79e1cb18857605c4f36d3ded0c7f6 = $(`<div id="html_e2c79e1cb18857605c4f36d3ded0c7f6" style="width: 100.0%; height: 100.0%;"><b>Vehicle 3</b><br>Penn Plaza West → Midtown Manhattan Depot<br>Distance: 988m</div>`)[0];
+                popup_f5e1e5184f7fbc1581c1093666911651.setContent(html_e2c79e1cb18857605c4f36d3ded0c7f6);
+            
+        
+
+        poly_line_f6688a9de5910e4851a842920fdf0e5b.bindPopup(popup_f5e1e5184f7fbc1581c1093666911651)
+        ;
+
+        
+    
+    
+            poly_line_f6688a9de5910e4851a842920fdf0e5b.bindTooltip(
+                `<div>
+                     Vehicle 3: 988m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_57f08e0c8fcb7a16e56a81741705dbbb = L.polyline(
+                [[40.751105, -73.992947], [40.751198, -73.993163], [40.751206, -73.993182], [40.751478, -73.993818], [40.751532, -73.993943], [40.751575, -73.993911], [40.751882, -73.993688], [40.75211, -73.993522], [40.752199, -73.993458], [40.752283, -73.993397], [40.752591, -73.993172], [40.752805, -73.993015], [40.752858, -73.992976], [40.752925, -73.992928], [40.75315, -73.992759], [40.753417, -73.99257], [40.753478, -73.992525], [40.753422, -73.992391], [40.753072, -73.991558], [40.75234, -73.989811], [40.752289, -73.989688], [40.752236, -73.989563], [40.75148, -73.987771], [40.751445, -73.987687], [40.751369, -73.987506], [40.751139, -73.986963], [40.751082, -73.986828], [40.751041, -73.986729], [40.750084, -73.98446], [40.749905, -73.984038], [40.749786, -73.983755], [40.749728, -73.983617], [40.749662, -73.983665], [40.749163, -73.984028], [40.749105, -73.984071], [40.749053, -73.984108], [40.748535, -73.984484]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_9881296bb39b4ef039e5ce8a228a9606 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bce4519d0e74b7e0d7516bb056db9dcf = $(`<div id="html_bce4519d0e74b7e0d7516bb056db9dcf" style="width: 100.0%; height: 100.0%;"><b>Vehicle 4</b><br>Midtown Manhattan Depot → 34th & Park Ave<br>Distance: 1355m</div>`)[0];
+                popup_9881296bb39b4ef039e5ce8a228a9606.setContent(html_bce4519d0e74b7e0d7516bb056db9dcf);
+            
+        
+
+        poly_line_57f08e0c8fcb7a16e56a81741705dbbb.bindPopup(popup_9881296bb39b4ef039e5ce8a228a9606)
+        ;
+
+        
+    
+    
+            poly_line_57f08e0c8fcb7a16e56a81741705dbbb.bindTooltip(
+                `<div>
+                     Vehicle 4: 1355m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_e97f96d99bbc78922abedc9ae8e7c21c = L.polyline(
+                [[40.748535, -73.984484], [40.74853, -73.984488], [40.748454, -73.984546], [40.748352, -73.984618], [40.747833, -73.984995], [40.747774, -73.985038], [40.747831, -73.985172], [40.747994, -73.985558]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_5eb1a7c5841875f59cac7e537e98e39a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b4aec0e6119982aa74115fd3ecd8da7a = $(`<div id="html_b4aec0e6119982aa74115fd3ecd8da7a" style="width: 100.0%; height: 100.0%;"><b>Vehicle 4</b><br>34th & Park Ave → Koreatown 32nd<br>Distance: 147m</div>`)[0];
+                popup_5eb1a7c5841875f59cac7e537e98e39a.setContent(html_b4aec0e6119982aa74115fd3ecd8da7a);
+            
+        
+
+        poly_line_e97f96d99bbc78922abedc9ae8e7c21c.bindPopup(popup_5eb1a7c5841875f59cac7e537e98e39a)
+        ;
+
+        
+    
+    
+            poly_line_e97f96d99bbc78922abedc9ae8e7c21c.bindTooltip(
+                `<div>
+                     Vehicle 4: 147m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_d27f6451da658d20e26d831e1500a376 = L.polyline(
+                [[40.7478, -73.9857], [40.747, -73.9857]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_2dfb113231f549cf34bd755d4dad0f90 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_081e14c886ba3c05754e6d4184fa7efc = $(`<div id="html_081e14c886ba3c05754e6d4184fa7efc" style="width: 100.0%; height: 100.0%;"><b>Vehicle 4</b><br>Koreatown 32nd → Empire State South<br>Distance: 100m</div>`)[0];
+                popup_2dfb113231f549cf34bd755d4dad0f90.setContent(html_081e14c886ba3c05754e6d4184fa7efc);
+            
+        
+
+        poly_line_d27f6451da658d20e26d831e1500a376.bindPopup(popup_2dfb113231f549cf34bd755d4dad0f90)
+        ;
+
+        
+    
+    
+            poly_line_d27f6451da658d20e26d831e1500a376.bindTooltip(
+                `<div>
+                     Vehicle 4: 100m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_40b23115ddb822d72cb2e97f36d9d198 = L.polyline(
+                [[40.746968, -73.985624], [40.746589, -73.985901], [40.746531, -73.985943], [40.746477, -73.985984], [40.745973, -73.986354], [40.745922, -73.986392], [40.745861, -73.986436], [40.745657, -73.986586], [40.745358, -73.986804], [40.745301, -73.986846], [40.745264, -73.986873], [40.745244, -73.986888], [40.744742, -73.987254], [40.744678, -73.987301], [40.74463, -73.987336], [40.744121, -73.987707], [40.744067, -73.987745], [40.744005, -73.98779], [40.743509, -73.988151], [40.743457, -73.988191], [40.743393, -73.988237], [40.743275, -73.988325], [40.74313, -73.988389], [40.743064, -73.988418], [40.74301, -73.988442], [40.742858, -73.988534], [40.742768, -73.988597], [40.742735, -73.98862], [40.742321, -73.988915], [40.742299, -73.98893], [40.742274, -73.988942], [40.742251, -73.988948], [40.742222, -73.988953], [40.7422, -73.988955], [40.74218, -73.988954], [40.742161, -73.988951], [40.742123, -73.988941], [40.742089, -73.988938], [40.742055, -73.988939], [40.742018, -73.988942], [40.741898, -73.988968], [40.74178, -73.988997], [40.741486, -73.989085], [40.741364, -73.989138], [40.741334, -73.989065], [40.741217, -73.988782], [40.741166, -73.988659], [40.741159, -73.988642], [40.741147, -73.988614], [40.741102, -73.988507], [40.741039, -73.988358], [40.740924, -73.988085], [40.740882, -73.987985], [40.74098, -73.987915], [40.741499, -73.98754], [40.741545, -73.987506], [40.7416, -73.987465], [40.742024, -73.987145], [40.742102, -73.987086], [40.742157, -73.987045], [40.742205, -73.98701], [40.742338, -73.986913]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_85bdf19ab5eea57679917eeb019e602a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6a9b89e94e220a14c8b640083d4e5dfc = $(`<div id="html_6a9b89e94e220a14c8b640083d4e5dfc" style="width: 100.0%; height: 100.0%;"><b>Vehicle 4</b><br>Empire State South → Madison Square Park<br>Distance: 992m</div>`)[0];
+                popup_85bdf19ab5eea57679917eeb019e602a.setContent(html_6a9b89e94e220a14c8b640083d4e5dfc);
+            
+        
+
+        poly_line_40b23115ddb822d72cb2e97f36d9d198.bindPopup(popup_85bdf19ab5eea57679917eeb019e602a)
+        ;
+
+        
+    
+    
+            poly_line_40b23115ddb822d72cb2e97f36d9d198.bindTooltip(
+                `<div>
+                     Vehicle 4: 992m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_258c1e6682e407c148e45c2a8a08e61e = L.polyline(
+                [[40.742338, -73.986913], [40.742715, -73.986639], [40.742771, -73.986598], [40.742835, -73.986551], [40.743332, -73.986189], [40.743395, -73.986143], [40.743437, -73.986241], [40.744019, -73.987632], [40.744067, -73.987745], [40.744116, -73.987863], [40.744264, -73.988226]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_7220b123f451dcdb7ecfb5de4bebf920 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b72e32b51d78398c173b5f9e38a79b84 = $(`<div id="html_b72e32b51d78398c173b5f9e38a79b84" style="width: 100.0%; height: 100.0%;"><b>Vehicle 4</b><br>Madison Square Park → 28th & 6th Ave<br>Distance: 335m</div>`)[0];
+                popup_7220b123f451dcdb7ecfb5de4bebf920.setContent(html_b72e32b51d78398c173b5f9e38a79b84);
+            
+        
+
+        poly_line_258c1e6682e407c148e45c2a8a08e61e.bindPopup(popup_7220b123f451dcdb7ecfb5de4bebf920)
+        ;
+
+        
+    
+    
+            poly_line_258c1e6682e407c148e45c2a8a08e61e.bindTooltip(
+                `<div>
+                     Vehicle 4: 335m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_9c59fd1c8124a3d905b66661cb744ec5 = L.polyline(
+                [[40.744264, -73.988226], [40.74449, -73.988778], [40.744536, -73.988892], [40.744572, -73.988978], [40.745366, -73.990837], [40.745421, -73.990968], [40.745483, -73.990923], [40.745847, -73.990657], [40.745979, -73.990561], [40.746038, -73.990518], [40.746099, -73.990474], [40.746228, -73.99038], [40.746438, -73.990237], [40.746608, -73.990109], [40.746623, -73.990098], [40.746666, -73.990068], [40.746721, -73.990027], [40.747218, -73.989661], [40.747277, -73.989617], [40.747225, -73.989489], [40.746831, -73.988556], [40.746796, -73.988473], [40.746745, -73.988352], [40.746365, -73.987447], [40.745973, -73.986514], [40.745922, -73.986392], [40.745861, -73.986436], [40.745657, -73.986586], [40.745358, -73.986804], [40.745301, -73.986846], [40.745352, -73.986966], [40.745634, -73.987631], [40.745895, -73.98825]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_b7c84ee8632a17a905a7de7bfbbb2a30 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_88f35c91cafb41d8052b112038e004b4 = $(`<div id="html_88f35c91cafb41d8052b112038e004b4" style="width: 100.0%; height: 100.0%;"><b>Vehicle 4</b><br>28th & 6th Ave → 30th & Broadway<br>Distance: 1026m</div>`)[0];
+                popup_b7c84ee8632a17a905a7de7bfbbb2a30.setContent(html_88f35c91cafb41d8052b112038e004b4);
+            
+        
+
+        poly_line_9c59fd1c8124a3d905b66661cb744ec5.bindPopup(popup_b7c84ee8632a17a905a7de7bfbbb2a30)
+        ;
+
+        
+    
+    
+            poly_line_9c59fd1c8124a3d905b66661cb744ec5.bindTooltip(
+                `<div>
+                     Vehicle 4: 1026m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_3125627416966f387dc1803609ed5095 = L.polyline(
+                [[40.745895, -73.98825], [40.745997, -73.988493], [40.746048, -73.98861], [40.746083, -73.988693], [40.746609, -73.989934], [40.746666, -73.990068], [40.746719, -73.990194], [40.746964, -73.990774], [40.747811, -73.992782], [40.747863, -73.992905], [40.747921, -73.993038], [40.748195, -73.993691], [40.749005, -73.995614], [40.749056, -73.995729], [40.749105, -73.995693], [40.749622, -73.995333], [40.749674, -73.995296], [40.74973, -73.995256], [40.749953, -73.995094], [40.750238, -73.994887], [40.750294, -73.994845], [40.750368, -73.994791], [40.750792, -73.994481], [40.750882, -73.994416], [40.751464, -73.993993], [40.751532, -73.993943], [40.751478, -73.993818], [40.751206, -73.993182], [40.751198, -73.993163], [40.751105, -73.992947]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.9, "smoothFactor": 1.0, "stroke": true, "weight": 6}
+            ).addTo(map_f6e2f99beb4df76c8337633d2a070a9e);
+        
+    
+        var popup_400fd9f95f771b58981f4a2545adaae2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a2ef5c679b5e8f831fe950965911111b = $(`<div id="html_a2ef5c679b5e8f831fe950965911111b" style="width: 100.0%; height: 100.0%;"><b>Vehicle 4</b><br>30th & Broadway → Midtown Manhattan Depot<br>Distance: 1133m</div>`)[0];
+                popup_400fd9f95f771b58981f4a2545adaae2.setContent(html_a2ef5c679b5e8f831fe950965911111b);
+            
+        
+
+        poly_line_3125627416966f387dc1803609ed5095.bindPopup(popup_400fd9f95f771b58981f4a2545adaae2)
+        ;
+
+        
+    
+    
+            poly_line_3125627416966f387dc1803609ed5095.bindTooltip(
+                `<div>
+                     Vehicle 4: 1133m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

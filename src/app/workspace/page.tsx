@@ -9,17 +9,17 @@ import VehicleInput from '@/components/VehicleInput'
 import MapView from '@/components/MapView'
 import Results from '@/components/Results'
 import MLAnalytics from '@/components/MLAnalytics'
-import { Play, Settings, Download, Upload, Loader2, BarChart3, ArrowLeft, Map, Target } from 'lucide-react'
+import { Play, Settings, Download, Database, Loader2, BarChart3, ArrowLeft, Map, Target } from 'lucide-react'
 import InteractiveMap from '@/components/InteractiveMap'
 
 export default function WorkspacePage() {
-  // Start with just a depot to showcase the add functionality
+  // Start with just a depot in New York City
   const [locations, setLocations] = useState<Location[]>([
-    { id: 1, name: 'Main Depot', x: 0.5, y: 0.5, demand: 0, type: 'depot' },
+    { id: 0, name: 'NYC Distribution Center', x: 0.5, y: 0.5, demand: 0, type: 'depot' },
   ])
 
   const [vehicles, setVehicles] = useState<Vehicle[]>([
-    { id: 1, name: 'Truck 1', capacity: 50, costPerKm: 1.0, maxDistance: 200 },
+    { id: 1, name: 'NYC-001', capacity: 50, costPerKm: 1.0, maxDistance: 200 },
   ])
 
   const [config, setConfig] = useState<OptimizationConfig>({
@@ -47,6 +47,7 @@ export default function WorkspacePage() {
   })
 
   const [isOptimizing, setIsOptimizing] = useState(false)
+  const [isSapImporting, setIsSapImporting] = useState(false)
   const [results, setResults] = useState<OptimizationResult | null>(null)
   const [activeTab, setActiveTab] = useState<'input' | 'map' | 'results' | 'analytics'>('input')
 
@@ -62,10 +63,10 @@ export default function WorkspacePage() {
           {
             vehicleId: 1,
             stops: [
-              { locationId: 1, arrivalTime: 0, load: 0, distance: 0 },
-              { locationId: 2, arrivalTime: 0.5, load: 15, distance: 12.3 },
+              { locationId: 0, arrivalTime: 0, load: 0, distance: 0 },
+              { locationId: 1, arrivalTime: 0.5, load: 15, distance: 12.3 },
               { locationId: 4, arrivalTime: 1.2, load: 25, distance: 8.7 },
-              { locationId: 1, arrivalTime: 2.0, load: 0, distance: 15.8 }
+              { locationId: 0, arrivalTime: 2.0, load: 0, distance: 15.8 }
             ],
             totalDistance: 36.8,
             totalCost: 36.8,
@@ -89,13 +90,114 @@ export default function WorkspacePage() {
     }
   }
 
+  const handleSapImport = async () => {
+    setIsSapImporting(true)
+    try {
+      // Simulate SAP import with delay
+      await new Promise(resolve => setTimeout(resolve, 2500))
+      
+      // Manhattan bounds for consistent coordinate conversion
+      const manhattanBounds = {
+        north: 40.7831, // Upper Manhattan
+        south: 40.7047, // Lower Manhattan  
+        east: -73.9441, // East side
+        west: -74.0200  // West side (Hudson River)
+      }
+
+      // Function to convert real NYC coordinates to normalized 0-1 scale
+      const coordsToNormalized = (lat: number, lng: number) => {
+        const x = (lng - manhattanBounds.west) / (manhattanBounds.east - manhattanBounds.west)
+        const y = (manhattanBounds.north - lat) / (manhattanBounds.north - manhattanBounds.south)
+        return { x: Math.max(0, Math.min(1, x)), y: Math.max(0, Math.min(1, y)) }
+      }
+
+      // NYC delivery locations with real coordinates, then converted to normalized
+      const nycRawLocations = [
+        // Depot - Penn Station area
+        { id: 0, name: 'NYC Distribution Center', lat: 40.7505, lng: -73.9890, demand: 0, type: 'depot' },
+        
+        // VERY CLOSE - NORTH of Depot (within 2-3 blocks)
+        { id: 1, name: 'Macy\'s Herald Square', lat: 40.7508, lng: -73.9876, demand: 3, type: 'customer' },
+        { id: 2, name: '42nd & 7th Ave', lat: 40.7548, lng: -73.9876, demand: 2, type: 'pickup' }, // GREEN
+        { id: 3, name: 'Times Square Plaza', lat: 40.7550, lng: -73.9851, demand: 4, type: 'customer' },
+        { id: 4, name: 'Bryant Park Cafe', lat: 40.7536, lng: -73.9832, demand: 2, type: 'customer' },
+        { id: 5, name: '40th & Broadway', lat: 40.7533, lng: -73.9877, demand: 3, type: 'customer' },
+        
+        // VERY CLOSE - EAST of Depot (within 2-3 blocks)
+        { id: 6, name: '34th & Park Ave', lat: 40.7485, lng: -73.9844, demand: 2, type: 'customer' },
+        { id: 7, name: '38th & Lexington', lat: 40.7514, lng: -73.9810, demand: 3, type: 'delivery' }, // PURPLE
+        { id: 8, name: 'Murray Hill', lat: 40.7478, lng: -73.9789, demand: 2, type: 'customer' },
+        { id: 9, name: '42nd & Park Ave', lat: 40.7521, lng: -73.9844, demand: 4, type: 'customer' },
+        { id: 10, name: 'Grand Central South', lat: 40.7505, lng: -73.9772, demand: 3, type: 'pickup' }, // GREEN
+        
+        // VERY CLOSE - SOUTH of Depot (within 2-3 blocks)
+        { id: 11, name: 'Empire State South', lat: 40.7470, lng: -73.9857, demand: 3, type: 'customer' },
+        { id: 12, name: 'Koreatown 32nd', lat: 40.7478, lng: -73.9857, demand: 2, type: 'customer' },
+        { id: 13, name: '30th & Broadway', lat: 40.7461, lng: -73.9881, demand: 3, type: 'delivery' }, // PURPLE
+        { id: 14, name: '28th & 6th Ave', lat: 40.7443, lng: -73.9882, demand: 2, type: 'customer' },
+        { id: 15, name: 'Madison Square Park', lat: 40.7425, lng: -73.9873, demand: 3, type: 'customer' },
+        
+        // VERY CLOSE - WEST of Depot (within 2-3 blocks)
+        { id: 16, name: '42nd & 9th Ave', lat: 40.7574, lng: -73.9913, demand: 2, type: 'customer' },
+        { id: 17, name: '38th & 9th Ave', lat: 40.7534, lng: -73.9943, demand: 3, type: 'pickup' }, // GREEN
+        { id: 18, name: '34th & 9th Ave', lat: 40.7505, lng: -73.9970, demand: 2, type: 'customer' },
+        { id: 19, name: '30th & 10th Ave', lat: 40.7478, lng: -73.9995, demand: 3, type: 'customer' },
+        { id: 20, name: 'Hudson Yards South', lat: 40.7520, lng: -74.0020, demand: 4, type: 'delivery' }, // PURPLE
+        
+        // VERY CLOSE - CENTRAL AREA (immediate vicinity of depot)
+        { id: 21, name: 'Madison Square Garden', lat: 40.7505, lng: -73.9934, demand: 4, type: 'customer' },
+        { id: 22, name: 'Penn Plaza East', lat: 40.7495, lng: -73.9920, demand: 2, type: 'customer' },
+        { id: 23, name: 'Penn Plaza West', lat: 40.7495, lng: -73.9948, demand: 3, type: 'customer' },
+        { id: 24, name: '33rd & 7th Ave', lat: 40.7495, lng: -73.9901, demand: 2, type: 'customer' },
+        
+        // HOME DEPOT LOCATION - MOVED TO CENTER
+        { id: 25, name: 'Home Depot Manhattan', lat: 40.7510, lng: -73.9890, demand: 5, type: 'delivery' }
+      ]
+
+      // Convert all locations to normalized coordinates
+      const nycLocations: Location[] = nycRawLocations.map(loc => {
+        const normalized = coordsToNormalized(loc.lat, loc.lng)
+        return {
+          id: loc.id,
+          name: loc.name,
+          x: normalized.x,
+          y: normalized.y,
+          demand: loc.demand,
+          type: loc.type as Location['type']
+        }
+      })
+
+      // NYC Vehicles (mix of trucks and drones)
+      const nycVehicles: Vehicle[] = [
+        { id: 1, name: 'NYC-001', capacity: 50, costPerKm: 1.2, maxDistance: 150, vehicleType: 'truck' },
+        { id: 2, name: 'NYC-002', capacity: 45, costPerKm: 1.1, maxDistance: 180, vehicleType: 'truck' },
+        { id: 3, name: 'NYC-003', capacity: 60, costPerKm: 1.3, maxDistance: 200, vehicleType: 'truck' },
+        { id: 4, name: 'NYC-004', capacity: 40, costPerKm: 1.0, maxDistance: 160, vehicleType: 'truck' },
+        { id: 5, name: 'DRONE-001', capacity: 5, costPerKm: 0.3, maxDistance: 25, vehicleType: 'drone' },
+        { id: 6, name: 'DRONE-002', capacity: 3, costPerKm: 0.2, maxDistance: 20, vehicleType: 'drone' }
+      ]
+
+      setLocations(nycLocations)
+      setVehicles(nycVehicles)
+      
+      // Show success message
+      alert(`Successfully imported SAP data for NYC:\n• ${nycLocations.length} locations loaded\n• ${nycVehicles.length} vehicles configured\n• Ready for route optimization`)
+      
+    } catch (error) {
+      console.error('SAP import failed:', error)
+      alert('SAP import failed. Please try again.')
+    } finally {
+      setIsSapImporting(false)
+    }
+  }
+
   const exportData = () => {
     const data = { locations, vehicles, config }
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = 'mtvrp-data.json'
+    a.download = 'mtvrp-nyc-data.json'
     a.click()
     URL.revokeObjectURL(url)
   }
@@ -167,15 +269,34 @@ export default function WorkspacePage() {
                 <span>Back to Home</span>
               </Link>
               <div className="border-l border-slate-300 pl-4">
-                <h1 className="text-2xl font-bold text-slate-900">RouteAI Workspace</h1>
+                <h1 className="text-2xl font-bold text-slate-900">TrafficRL Workspace - New York</h1>
                 <p className="text-slate-600">Multi-Task Vehicle Routing Problem Solver</p>
               </div>
             </div>
             
             <div className="flex space-x-3">
+              {/* SAP Import Button */}
+              <button
+                onClick={handleSapImport}
+                disabled={isSapImporting}
+                className="bg-green-600 hover:bg-green-700 disabled:bg-slate-400 text-white px-4 py-2 rounded-lg flex items-center space-x-2 transition-colors shadow-sm"
+              >
+                {isSapImporting ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <span>Importing SAP...</span>
+                  </>
+                ) : (
+                  <>
+                    <Database className="w-4 h-4" />
+                    <span>Import SAP</span>
+                  </>
+                )}
+              </button>
+
               <label className="cursor-pointer bg-slate-100 hover:bg-slate-200 px-4 py-2 rounded-lg flex items-center space-x-2 transition-colors">
-                <Upload className="w-4 h-4" />
-                <span>Import</span>
+                <Database className="w-4 h-4" />
+                <span>Import File</span>
                 <input
                   type="file"
                   accept=".json"
@@ -720,7 +841,7 @@ export default function WorkspacePage() {
             </div>
             <h3 className="text-xl font-semibold text-slate-900 mb-2">Optimizing Routes</h3>
             <p className="text-slate-600 mb-4">
-              Our AI is analyzing your data and finding the optimal delivery routes...
+              Our AI is analyzing your NYC data and finding the optimal delivery routes...
             </p>
             <div className="w-full bg-slate-200 rounded-full h-2">
               <div className="bg-blue-600 h-2 rounded-full w-2/3 animate-pulse"></div>
@@ -728,72 +849,27 @@ export default function WorkspacePage() {
           </div>
         </div>
       )}
+
+      {/* SAP Import Status Modal */}
+      {isSapImporting && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl p-8 max-w-md mx-4 text-center shadow-2xl">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Loader2 className="w-8 h-8 text-green-600 animate-spin" />
+            </div>
+            <h3 className="text-xl font-semibold text-slate-900 mb-2">Importing SAP Data</h3>
+            <p className="text-slate-600 mb-4">
+              Loading NYC delivery locations and vehicle configurations from SAP...
+            </p>
+            <div className="w-full bg-slate-200 rounded-full h-2">
+              <div className="bg-green-600 h-2 rounded-full w-3/4 animate-pulse"></div>
+            </div>
+            <p className="text-xs text-slate-500 mt-3">
+              Configuring 25 locations + 4 vehicles
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   )
-}
-
-// Updated lib/types.ts
-export interface Location {
-  id: number
-  name: string
-  x: number
-  y: number
-  demand: number
-  type: 'depot' | 'customer' | 'pickup' | 'delivery'
-}
-
-export interface Vehicle {
-  id: number
-  name: string
-  capacity: number
-  costPerKm: number
-  maxDistance?: number
-}
-
-export interface OptimizationConfig {
-  algorithm: 'attention_model' | 'pomo' | 'classical'
-  maxEpochs: number
-  batchSize: number
-  useGPU: boolean
-  learningRate?: string
-  earlyStoping?: boolean
-  optimizationPolicy?: string
-  features?: {
-    weather?: boolean
-    traffic?: boolean
-    carbonOptimal?: boolean
-    customerSatisfaction?: boolean
-    priorityDelivery?: boolean
-    dynamicRouting?: boolean
-  }
-  weights?: {
-    cost?: number
-    time?: number
-    satisfaction?: number
-    environment?: number
-  }
-}
-
-export interface RouteStop {
-  locationId: number
-  arrivalTime: number
-  load: number
-  distance: number
-}
-
-export interface OptimizedRoute {
-  vehicleId: number
-  stops: RouteStop[]
-  totalDistance: number
-  totalCost: number
-  totalTime: number
-}
-
-export interface OptimizationResult {
-  routes: OptimizedRoute[]
-  totalCost: number
-  totalDistance: number
-  totalTime: number
-  solveTime: number
-  algorithm: string
 }
